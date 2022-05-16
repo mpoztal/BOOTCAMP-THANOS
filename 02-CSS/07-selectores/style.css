@@ -1,0 +1,315 @@
+/*? SELECTORES (CON UN SELECTOR) */
+
+/** Universal, 
+   Todas las etiq con el * FUNCIONAN*/
+
+* {
+  font-family: 'Arial', sans-serif;
+}
+
+/** Por etiqueta  */
+h1 {
+  color: tomato;
+}
+
+/** Por class  */
+.subtitulo {
+  background-color: lightgray;
+}
+
+/** Por su ID  */
+#titulo-superior {
+  text-decoration: underline;
+}
+
+/** Mezclando etiquetas sin poner espacios  */
+h2.subtitulo#titulo-superior {
+  padding: 5px;
+}
+
+/** Propiedades duplicadas */
+h2, h3 {
+  text-transform: capitalize;
+}
+
+
+/** Por un atributo que tenga [ ]--->IDENTIFICADOR DE ATRIBUTOS */
+[type] {
+  border: 1px solid tomato;
+}
+input[type="text"] {
+  border-width: 3px;
+}
+
+/**=======================  */
+
+/*? COMINACIÓN DE SELECTORES (VARIOS SELECTORES)*/
+
+
+/**EL SIMBOLO + SIGNIFICA Hermanos adyacentes (que se tocan) */
+/*! Hay que leer de derecha a izquierda
+    -> Cualquier párrafo que antes tenga un hermano h3*/
+
+h3 + p {
+  letter-spacing: 2px;
+}
+
+/** Hermanos generales (No necesariamente se tocan)*/
+/* La virgulilla se hace con::after
+    AltGr + 4
+    Alt + 126(en el teclado numérico)
+    En mac es Alt + ñ */
+
+
+h3 ~ p {
+  color: crimson;
+}
+
+/** Hijos directos (con > éste simbolo)  */
+
+ul.lista > li {
+  border: 2px solid lightseagreen;
+  margin-block: 3px;  
+}
+
+/** Hijos generales o también llamados DESCENDIENTES  */
+ul.lista  li {
+  box-shadow: 0 0 5px hotpink;
+}
+
+
+/* Ahora podemos combinar los selectores COMO NOS DE LA GANA  */
+ul.lista  li > a + p {
+  box-shadow: 0 0 5px red;
+}
+
+
+/** ============================== */
+
+/*? Pseudoselectores */
+/**  Formas para escoger entre el Primer hijo y último hijo  */
+/* Solo se seleccionan si son hijos de algo */
+li:first-child {
+  color: red;
+}
+li:last-child {
+  text-transform: uppercase;
+}
+
+/** Primero de su tipo y último de su tipo  */
+
+/* Solo se seleccionan si son los primeros o últimos de su clase  */
+
+li:first-of-type {
+  color: yellow;
+}
+li:last-of-type {
+  color: blue;
+}
+
+
+/** Hijos de en medio */
+/* Ejemplo con una tabla */
+
+td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+table {
+  border-collapse: collapse;   
+}
+
+tr {
+  background: lightgray;
+}
+tr:first-child {
+  background: white;
+}
+tr:nth-child(5) {
+  background: white;
+}
+
+/* Para hacer los pares (donde n=2) haría una operacion matematica
+para ir pintando celdas pares (2*1=2, 2*2=4..)pintando sucesiv.
+las celdas 2,4,6,8... */
+tr:nth-child(2n) {
+  color: tomato;
+}
+
+/* Para hacer los impares (2*1=2 y 2-1=1) (2*2=4 y 4-1=3)
+asi,sucesivamente dando como resultado las celdas pintadas: (1,3,5,7):after  */
+tr:nth-child(2n - 1) {
+  color: lightseagreen;
+}
+/* RESUMEN: SI PONEMOS UN NºCONCRETO, SOLO PINTA ESA CELDA
+SI PONEMOS (2n) AFECTA A PARES   SI PONEMOS (2n-1) AFECTA A IMPARES*/
+
+/** PARA NEGAR  */
+
+td {
+  text-decoration: underline;
+}
+
+td:not(:last-child) {
+  text-decoration-style: dashed;
+}
+td:not(.especial) {
+  font-variant: small-caps;
+}
+
+
+/*? PSEUDO SELECTORES POR UN CAMBIO DE ESTADO entiendase 
+por cambio estado cuando pasamos cursor x un link x ejem*/
+ 
+/* Esta 1ª estructura es muy tipica para un buton  */
+.btn {
+  margin-block: 20px; 
+  padding: 5px 10px;
+  border: 1px solid black;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/** Cuando estamos encima de algo CAMBIA DE COLOR */
+.btn:hover {
+  background-color: lightgray;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+/** Cuando hacemos click en algo CAMBIA DE COLOR  */
+.btn:active {
+  background: gray;
+}
+a:active {
+  color: red;
+}
+
+/** Cuando estamos en foco */
+input:focus:not([type="checkbox"]) {
+  outline: 2px solid green;
+}
+
+
+/** Cuando hemos apretado un checkbox */
+input[type="checkbox"]:checked {
+  width: 20px;
+  height: 20px;
+}
+
+/** ¡TRUCAZO! -> Podemos cambiar los estilos de unos elementos CAMBIANDO EL ESTADO DE OTROS  */
+
+.btn:hover ~ p {
+  border: 1px solid crimson;
+}
+
+/** SE MANTIENE UN ESTILO MIENTRAS ESTÁ SELECCIONADO (cambia de color a lightseagreen) */
+input[type="checkbox"]:checked + label {
+  color: lightseagreen;
+}
+
+
+/*? PSEUDOELEMENTOS  */
+/** Para estilizar solo la primera LETRA  */
+.parrafillo::first-letter {
+  color: gold;
+  font-size: 50px;
+}
+
+/** Para estilizar solo la primera LÍNEA  */
+.parrafillo::first-line {
+  text-decoration: underline ;
+}
+
+/** Para cambiar el color de la selección de texto  */
+
+.parrafillo::selection {
+  background-color: hotpink;
+  color: white;
+}
+
+::selection {
+  background: gold;
+}
+
+/** En un placeholder de un input  */
+input::placeholder {
+  color:rgba(0, 139, 139, 0.316);
+}
+
+/** Los marcadores de una lista SUSTITUIR EL PUNTO POR UNA CACA */
+.lista3 li::marker {
+  content: '💩pff   ';
+  color: crimson;
+  font-size: 10px;  
+}
+
+/** ::before y el ::after 1º EJEMP. SE CREA SPAN 2º ES PARA EVITAR CREAR SPAN  */
+
+.before {
+  margin-right: 10px;
+  font-size: 10px;
+}
+
+.after {
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+/* 2º EJEMPLO */
+
+h1.before-after1::before {
+  content: 'hola';    
+  margin-right: 10px;
+  font-size: 10px; 
+}
+h1.before-after1::after {
+  content: 'adios';    
+  margin-left: 10px;
+  font-size: 10px; 
+}
+
+
+h1.titulo-lineas {
+  text-align: center;
+}
+
+
+h1.titulo-lineas::before {
+  content: '';  
+  display: inline-block;
+  height: 3px;
+  width: 20px;
+  margin-right: 10px;
+  font-size: 10px;
+  background: gold;
+}
+h1.titulo-lineas::after {
+  content: '';  
+  display: inline-block;
+  height: 3px;
+  width: 20px;
+  margin-left: 10px;
+  font-size: 10px;
+  background: gold;
+}
+
+/* CREAMOS UN MENU CON DIBUJOS DELANTE */
+
+h4:nth-child(1)::before {
+  content: '💩';
+  margin-right: 10px;
+}
+
+h4:nth-child(2)::before {
+  content: '🎪';
+  margin-right: 10px;
+}
+h4:nth-child(3)::before {
+  content: '💦';
+  margin-right: 10px;
+}
+h4:nth-child(4)::before {
+  content: '💥';
+  margin-right: 10px;
+}

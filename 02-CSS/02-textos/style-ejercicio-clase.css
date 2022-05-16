@@ -1,0 +1,38 @@
+body {
+    font-family: 'Playfair Display', serif; 
+}
+
+h1, h2, h3 {
+    text-align: center ;
+}
+
+.titulo-noticia {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 900;
+}
+
+h3 {
+    color: tomato;
+    font-weight: 600;
+}
+
+p {
+    line-height: 20px;
+} 
+
+strong {
+    font-size: 24px;
+}
+
+
+
+.resaltar {
+    color: rgb(255, 255, 0) 
+}
+
+.texto-verde {
+    color: green;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://ivan-luengo.com/wp-content/uploads/2020/03/cropped-favicon-ivan_luengo-32x32.png">
+
+  <!-- Iconos font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Prueba maquetación 02</title>
+</head>
+<body>
+  
+  <header class="header">
+    <div class="container header-container">
+
+      <img class="logo" src="https://picsum.photos/id/57/40" alt="Logo de mi web">
+
+      <nav class="main-menu">
+        <a class="main-menu__link" href="#">Inicio</a>
+        <a class="main-menu__link" href="#">Nosotros</a>
+        <a class="main-menu__link" href="#">Blog</a>
+        <a class="main-menu__link" href="#">Contacto</a>
+      </nav>
+
+      <div class="menu-toggle">
+        <label for="toggle"><i class="fa-solid fa-burger"></i></label>
+        <input id="toggle" type="checkbox">
+        <nav class="mobile-menu">
+          <a class="mobile-menu__link" href="#">Inicio</a>
+          <a class="mobile-menu__link" href="#">Nosotros</a>
+          <a class="mobile-menu__link" href="#">Blog</a>
+          <a class="mobile-menu__link" href="#">Contacto</a>
+        </nav>
+      </div>
+
+      <form class="search-box">
+        <input class="search-box__input" name="search" type="search" placeholder="Texto a buscar...">
+        <button class="search-box__btn">Buscar</button>
+      </form>
+
+
+
+    </div>
+  </header>
+
+  <main class="content container main-container">
+    <div class="left-content">
+      
+      <section class="welcome-section">
+        <h1 class="welcome-section__title">¡Bienvenid@ a mi web!</h1>
+        <img class="welcome-section__img" src="https://picsum.photos/id/79/90" alt="carretera">
+        <p class="welcome-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatem assumenda exercitationem suscipit iusto, magni, nobis distinctio saepe aut cumque perspiciatis quisquam accusantium neque architecto. Aperiam reprehenderit ea culpa velit!</p>
+      </section>
+
+      <section class="news-section">        
+        <article class="news">
+          <i class="news__icon fa-solid fa-dragon"></i>
+          <h3 class="news__title">Artículo 1</h3>
+          <p class="news__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis reprehenderit nulla dolorem porro perferendis itaque laboriosam amet molestias ex qui?</p>
+        </article>
+
+        <article class="news">
+          <i class="news__icon fa-solid fa-bomb"></i>
+          <h3 class="news__title">Artículo 2</h3>
+          <p class="news__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis reprehenderit nulla dolorem porro perferendis itaque laboriosam amet molestias ex qui?</p>
+        </article>
+
+        <article class="news">
+          <i class="news__icon fa-solid fa-meteor"></i>
+          <h3 class="news__title">Artículo 3</h3>
+          <p class="news__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis reprehenderit nulla dolorem porro perferendis itaque laboriosam amet molestias ex qui?</p>
+        </article>
+        
+      </section>
+
+      <section class="info-section">
+        <p class="info-section__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </section>
+
+    </div>
+
+    <aside class="right-content">
+
+      <h2 class="aside-title">Artículos anteriores</h2>
+
+      <nav class="old-news-nav">
+        <a class="old-news-nav__link" href="#">Artículo 1</a>
+        <a class="old-news-nav__link" href="#">Artículo 2</a>
+        <a class="old-news-nav__link" href="#">Artículo 3</a>
+        <a class="old-news-nav__link" href="#">Artículo 4</a>
+        <a class="old-news-nav__link" href="#">Artículo 5</a>
+      </nav>
+
+      <h2 class="aside-title">Redes sociales</h2>
+
+      <div class="rrss-icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <small class="legal-text">Copyright &copy;</small>
+  </footer>
+  
+
+</body>
+</html>

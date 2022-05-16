@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../04-links/favicon_io/favicon-32x32.png">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+   <h1>Formularios en HTML</h1>
+
+   <form>
+
+    <!-- Texto corto básico, lo envolvemos con un div para darle estilo a posteriori -->
+
+       <div>
+           <label for="nombre">Nombre*</label>
+           <input 
+            id="nombre" 
+            type="text" 
+            placeholder="Carlos..." 
+            name="nombre" 
+            required
+        >
+       </div>
+
+       <!-- Email, lo envolvemos con un div para darle estilo a posteriori -->
+       <div>
+           <label for="email">Email</label>
+           <input 
+           id="email" 
+           type="email" 
+           placeholder="info@email.com"
+           name="email" 
+        >
+       </div>
+        
+       <!-- Contraseña -->
+        <div>
+            <label for="pass">Contraseña</label>
+            <input 
+            id="pass" 
+            type="password" 
+            placeholder="*****"
+            name="pass" 
+         >
+        </div>
+        
+        <!-- Número -->
+       <div>
+        <label for="edad">edad</label>
+        <input 
+            id="edad" 
+            type="number" 
+            name="edad"
+            max="130"
+            min="18"
+        >
+        
+        <!-- Telefono -->
+        <div>
+                <label for="phone">telefono</label>
+        <input
+                id="phone" 
+                type="tel" 
+                placeholder="+34 612 345 578"
+                name="phone"
+        >
+        </div>
+        
+        <!-- Página web URL -->
+        <div>
+            <label for="TU-WEB">Tu página web</label>
+            <input 
+            id="TU-WEB" 
+            type="url" 
+            placeholder="https://tuweb.com"
+            name="TU-WEB" 
+         >
+        </div>
+        <!-- Archivo   file-->
+        <div>
+            <label for="photo">Sube tu foto</label>
+            <input 
+            id="photo" 
+            type="file" 
+            name="photo" 
+         >
+        </div>
+
+           <!-- Checkbox  Interruptor-->
+           <div>
+            <label for="aceptas">¿Aceptas las condiciones?</label>
+            <input 
+            id="aceptas" 
+            type="checkbox" 
+            name="aceptas" 
+         >
+        </div>
+          <!-- Checkbox  varios-->
+        <div>
+            <h2>Estudios:</h2>
+            <label for="javascript">Javascript</label>
+            <input 
+            id="javascript"             
+            name="javascript" 
+            type="checkbox" 
+         >
+
+         <label for="html">Html</label>
+         <input 
+         id="html"             
+         name="html" 
+         type="checkbox" 
+      >
+
+      <label for="css">CSS</label>
+      <input 
+      id="css"             
+      name="css" 
+      type="checkbox" 
+   >
+
+         <!-- Radio  O uno u otro-->
+         <h2>Sexo:</h2>
+         <div>
+            <label for="woman">Mujer</label>
+            <input 
+            id="woman"             
+            name="woman" 
+            type="radio" 
+         >
+        </div>
+
+        <div>
+            <label for="man">Hombre</label>
+            <input 
+            id="man"             
+            name="man" 
+            type="radio" 
+         >
+        </div>
+         <!-- Select  pestaña seleccionable -->
+        <div>
+            <label for="Aficiones">Aficiones</label>
+
+            <select name="aficiones" id="aficiones">
+               <option value="">Seleccionar una aficion...                 
+               </option>
+               <option value="patinar">Patinar</option>
+               <option value="correr">Correr</option>
+               <option value="leer">Leer</option>
+               <option value="ir al cine">Ir al cine</option>
+            </select>
+ 
+        </div>
+         <!-- Select  múltiple-->
+        <div>
+         <label for="estudios">Estudios</label>
+
+         <select name="estudios" id="estudios" 
+         multiple size="5">
+                           
+            <option value="patinar">EGB</option>
+            <option value="correr">ESO</option>
+            <option value="leer">Bachillerato</option>
+            <option value="ir al cine">Universidad</option>
+            <option value="correr">Master</option>
+         </select>
+
+     </div>
+         <!-- Inputs secundarios -->
+         <div>
+            <!-- Fecha   date-->
+            <label for="cumple">Tu fecha de nacimiento</label>
+            <input 
+            id="cumple" 
+            type="date" 
+            name="cumple" 
+         >
+        </div>
+        
+    
+    
+    
+    </div>
+
+
+
+    
+    
+    
+    
+    
+    </div>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       <br>
+       <br>
+       <input type="submit" value="Clic para enviar">
+       <input type="button">Clic</button>
+       <input type="reset">
+
+
+
+   </form>
+   
+ 
+</body>
+</html>

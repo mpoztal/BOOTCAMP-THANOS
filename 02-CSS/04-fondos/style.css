@@ -1,0 +1,36 @@
+.fondo-color {
+    background-color: blueviolet;
+}
+
+p.fondo-imagen {
+    background-image: url('https://images.pexels.com/photos/62324/leopard-safari-wildier-botswana-62324.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
+    
+    /** distintas propiedades para el background */
+   /** background-repeat: repeat-x */ 
+   /** background-repeat: repeat-y */ 
+   /** background-repeat: no-repeat  */ 
+}
+p.fondo-fijo {
+    background-image: url('https://picsum.photos/id/320/500');
+}
+
+p.degradado{
+    background: linear-gradient(grey, blue);
+}
+
+.truco{
+    background: linear-gradient(
+        rgba(121, 95, 95, 0.5), 
+        rgba(121, 95, 95, 0.5)), 
+        url('https://picsum.photos/id/320/500');
+}
+
+
+
+
+
+
+
+
+
+

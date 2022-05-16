@@ -1,0 +1,110 @@
+h1, h2, h3, p, li {
+    font-family: 'roboto';
+    font-weight: bold;
+}
+h1, h2 {
+    font-size: 700; 
+}
+p {
+    font-size: 400;
+    text-align: left;
+}
+
+q {
+    font-family: 'Roboto Slab';
+    font-size: 500;
+    text-decoration:underline dashed lightsalmon;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+    text-decoration: none;
+}
+.fondo-rosa {
+   background-color: lightsalmon; 
+}
+
+.caja-1 {
+    background-color: black;
+    color: white; 
+    margin: 0;
+    text-align: right;
+ }
+ .caja-2 {
+    background-color: black;
+    color: white; 
+    margin: 0;
+    padding-top: 20px;
+    text-align:center;
+ }
+
+ .no-margin {
+    margin: 0;
+  }
+.no-padding {
+    padding: 0;
+}
+
+
+.caja-centrada {
+    text-align: center;
+    background-color:white;
+    width: 60%;
+    margin: 10px auto 10px auto;
+    /* margin left -> (margin-inline start)
+    margin right -> (margin-inline end)
+    block start -> (arriba)
+     block end -> (abajo)*/
+    max-width: 600px;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+ /*  no he interpretado los li como a  */
+.subrayado {
+    text-decoration: underline;
+}
+
+.inline-block {
+    display: inline-block;
+    background-color: lightgray;
+    margin: 4px;
+    width: 70%;
+    padding: 4px;
+}
+.borde-titulo {
+    border-bottom:3px solid lightgrey
+} 
+
+.borde-punteado {
+    border-bottom: 2px dashed black;
+    margin: 20px 10px;
+     /*padding: 0 50px 50px esto lo he interpretado de esta otra forma*/
+    padding: 20px 10px;
+}
+
+.fechas {
+  background-color: lightsalmon;
+  color: white;
+  padding: 2px 18px;
+}
+
+.texto-salmon {
+    color: lightsalmon;
+    background-color: lightgrey;
+}
+
+/*  He interpretado como link el texto blue */
+.link {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+
+
+   
+

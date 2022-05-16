@@ -1,0 +1,31 @@
+body {  
+  background-color: rgb(27, 43, 66);
+}
+
+
+img {
+  width: 20px;
+}
+nav {
+  background-color: rgb(42, 66, 102);
+  position: fixed;
+  flex-direction: column;
+  width: 50px;
+  height: calc(100vh - 30px);
+  border-radius: 10px;
+  left: 15px;
+  top: 15px;
+  display: flex;
+  row-gap: 10px;
+  align-items: center;
+  padding-block: 15px;
+}
+
+.ultima {
+  margin-top: auto;
+}
+
+main {
+  padding: 2rem 0;
+  margin-left: 80px;
+}

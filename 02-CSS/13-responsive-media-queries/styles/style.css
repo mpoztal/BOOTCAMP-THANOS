@@ -1,0 +1,79 @@
+body {
+  background: pink;
+}
+
+#rojo {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Si se cumple lo que hay entre parentesis...con lo q esto es un condicional */
+/*Primero se diseña en pantalla Móvil despues, se va poniendo condiciones a medida
+que la pantalla va creciendo, portatil, pc...  */
+
+/** con "min-width" le damos reglas css DE UN TAMAÑO PARA ARRIBA -> A PARTIR DE 500px HACIA ARRIBA  */
+/*! Hay que vigilar que lo que esté en las media queries tenga la misma especificidad o superior para que funcione   */
+@media (min-width: 500px) {
+  body {
+    background: crimson;
+  }
+
+  #rojo {
+    color: white;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    background: hotpink;
+  }
+}
+
+
+/** con "max-width" le damos reglas css DE UN TAMAÑO PARA ABAJO -> A PARTIR DE 300px HACIA ABAJO  */
+
+@media (max-width: 300px) {
+  body {
+    background: lightseagreen;
+  }
+}
+
+
+/** Podemos combinar condiciones con el "and"  */
+@media (min-width: 350px) and (max-width: 450px) {
+  body {
+    background: white;
+  }
+}
+
+/** Podemos añadir media queries para impresión, para solo pantallas, etc  */
+@media print{
+  h1#rojo {
+    color: blue;
+  }
+}
+
+/**  Como mucho Podemos añadir orientación de lapantalla (No es muy común)  */
+
+@media (orientation: portrait){
+  h2 {
+    color: green;
+  }
+}
+@media (orientation: landscape) {
+  h2 {
+    color: blue;
+  }
+}
+
+/*En definitiva hay que hacer 3 CSS: 
+Uno para móvil, otro para portatil y otro para PC  */

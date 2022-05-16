@@ -1,0 +1,43 @@
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color:white;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+p.foto1-gris {
+    background-image: url('https://picsum.photos/id/47/400');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;  
+}
+
+p.color-celeste { 
+    background-color: rgb(111, 195, 223); 
+}
+
+p.degradado1 {
+    background: linear-gradient(to right bottom, 
+    rgb(226, 32, 122), 
+    rgb(72, 32, 182));
+}
+/* Union de foto-fondo+degradado por encima  */
+p.foto2 {
+    background-image: linear-gradient(to right,  
+    rgba(239, 232, 10, 0.5), 
+    rgba(109, 11, 165, 0.5)) ,url('https://picsum.photos/id/49/400');
+    background-size: cover; 
+    background-position: center; 
+
+}
+/* Union de foto-fondo+degradado por encima  */
+
+p.foto3 {
+    background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)),url('https://picsum.photos/id/51/400');
+    background-size: cover; 
+    background-position: center;    
+
+}
+

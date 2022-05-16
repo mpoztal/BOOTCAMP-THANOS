@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivos multimedia</title>
+</head>
+<body>
+    <h1>Archivos multimedia</h1>
+    <h2>Imágenes</h2>
+
+    <!-- Etiqueta img para añadir una imágen. El atributo alt="" es casi obligatorio, 
+        es para el contenido de la foto -->
+
+    <img src="./assets/cucharas-madera.jpg" alt="Foto de unas cucharas de madera" width="150px">
+    <br>
+    <!-- Existen 2 etiq. para agrupar archivo multimedia + texto. Así estarán intimamente
+    relacionados. --> 
+    <!-- Si usamos un img y un párrafo, x ejemplo, NO sirve xq no están relacionados -->
+    <img src="./assets/elefante.jpg" alt="Foto de un elefante" width="200px">
+    <p>Elefante africano del Okavango</p>
+
+    <!-- Ya Si está intimamente relacionado, abajo estaría representado el pack -->
+
+    <figure>
+        <img src="./assets/elefante.jpg" alt="Foto de un elefante" width="200px">
+        <figcaption>Elefante africano del Okavango</figcaption>
+    </figure>
+
+    <h2>Vídeos</h2>
+    <!-- Vídeo simple con un sólo formato -->
+    <video src="./assets/video-mar.mp4" controls width="50%" loop></video>
+
+    <!-- Vídeos con varios formatos para asegurarnos -->
+    <figure>
+
+    <video width="50%" autoplay>
+        <source src="./assets/video-mar.mp4" type="video/mp4">
+        <source src="./assets/video-mar.webm" type="video/webm">
+        <source src="./assets/video-mar.ogg" type="video/ogg">
+        Tu navegador no soporta elementos de vídeo
+    </video> 
+    <figcaption>Vídeo de unas olas del Mar</figcaption>
+
+    </figure>
+
+    <h2>Audios</h2>
+
+    <audio src="./assets/moby-porcelain.mp3" controls>
+        Tu navegador no soporta elementos de vídeo
+    </audio>
+    
+    <figure>
+        
+    <audio>
+        <source src="./assets/moby-porcelain.mp3" type="audio/mpeg">
+        <source src="./assets/moby-porcelain.ogg" type="audio/ogg">
+        Tu navegador no soporta audio
+    </audio>
+
+    <figcaption>Moby - Porcelain</figcaption>
+    </figure>
+
+    <h2>iframes</h2>
+    <!-- iframes, podemos ver una web externa dentro de la nuestra
+    no muy recomendable su uso-->
+    <iframe src="https://20minutos.com" frameborder="1" width="50%">
+
+    </iframe>
+<!-- Video de youtube -->
+<!-- vas a yuotube, copias lo que te da al insertar y lo pegas envolviendo la etq. iframe -->
+    
+</body>
+</html>

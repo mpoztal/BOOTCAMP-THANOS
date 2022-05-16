@@ -1,0 +1,136 @@
+.container {
+  width: 80%;
+  /* max-width: 800px; */
+  margin: 0 auto;
+}
+
+.padre {
+  border: 2px solid black;
+  background: pink;
+  height: 450px;
+
+  /** Por defecto siempre pone todos los elementos en fila y pasan a tener el ancho de su contenido  */
+  display: flex;
+
+  /** Podemos decir qué dirección queremos que tengan */
+  /*! Cuando cambiamos la dirección, cambiamos los axis y ahora el justify-content y el align items estaran invertidos  */
+  flex-direction: column;
+  flex-direction: row;/* por defecto */
+  /* flex-direction: row-reverse;  raro */
+  /* flex-direction: column-reverse; raro */
+
+  /** alinear elementos según el "main-axis"  */
+  justify-content: space-around;
+  justify-content: space-evenly; /* Mismo espacio,repartido en toda la caja */
+  justify-content: center;
+  justify-content: flex-end;
+  justify-content: space-between;
+  justify-content: flex-start; /* por defecto */
+
+  /** Alinear en el "cross-axis"  */
+  align-items: flex-end;
+  align-items: baseline;
+  align-items: flex-start;
+  align-items: stretch; /* por defecto (estirados) */
+  align-items: center;
+
+  /*! TRUCO para centrar elementos en una caja  */
+
+  /*
+  display: flex;
+  justify.content: center;
+  align-items: center;  
+  */
+
+  /** Si queremos que cuando no quepan las cajas bajen a la siguiente línea usamos flex-wrap  */
+
+  flex-wrap: wrap-reverse; /* muy muy raro 🦇 */
+  flex-wrap: wrap; 
+  flex-wrap: nowrap; /* por defecto */
+
+  /** Para decidir cómo se alinean las FILAS cuando existe un wrap usamos align-content  */
+  align-content: flex-start;
+  align-content: flex-end;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: space-evenly;
+  align-content: stretch;  /* por defecto */
+  align-content: center;
+
+
+  /** Para decidir el espacio que hay entre filas y entre columnas usamos row-gap, column-gap y gap  */
+  column-gap: 2rem;
+  row-gap: 1rem;
+  gap: 1.5rem;
+ 
+
+  
+}
+
+.hijo {
+  border: 2px solid white;
+  padding: 0.3rem;   
+}
+
+.hijo1 {
+  background: crimson; 
+  order: 2;
+  width: 50px;
+  flex: 1;  
+}
+
+.hijo2 {
+  background: gold;
+  font-size: 3.5rem; 
+  order: 3;
+  
+  /* Flex-shrink lo usamos para permitir que un elemento se ESTRECHE o no */
+  flex-shrink: 0; /* por defecto es 1 */
+
+  /* Flex-grow lo usamos para permitir que un elemento se ESTIRE o no */
+  flex-grow: 7; /* por defecto es 0*/
+
+  /** flex es el shorthand de grow/shrink/basis, pero lo utilizamos normalmente con un solo número (flex-grow) para decirle a las cajas que se repartan el espacio de una determinada manera */
+  flex: 2;
+
+
+}
+.hijo3 {
+  background: lightseagreen;
+  order: 4;
+  flex-grow: 3;
+  flex: 4;
+
+  /** Para alinear solo un elemento según el cross-axis  */  
+  align-self: flex-end;
+
+}
+.hijo4 {
+  background:darkslateblue;
+  color: white;
+  order: 1;
+}
+
+
+
+/*! TRUCO -> Podemos hacer que los elementos dentro de flex empujen a otros usango margins  */
+
+.cabecera {
+  margin-top: 2rem;
+  background: gold;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  /* border: 2px solid crimson; */
+  margin-inline: 1rem;
+}
+
+.menu {
+  /* border: 2px solid lightseagreen; */
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+/* EN EL README ESTA LA PAG DONDE NOS INDICA TODO FLEX ( https://css-tricks.com) */

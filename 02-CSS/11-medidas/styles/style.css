@@ -1,0 +1,104 @@
+/*? MEDIDAS  */
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  /** Tantos por ciento -> Siempre referente a su padre  */
+  width: 80%;
+
+  /** Píxeles -> Siempre fijos */
+  max-width: 600px;
+  margin: 0 auto;  
+}
+
+/** ViewWidths y ViewHeights */
+/* Siempre toma como referencia el tamaño del navegador */
+
+.caja {
+  border: 2px solid black;
+  height: 50px;
+  margin-block: 5px;
+}
+
+.caja1 {
+  background: pink;
+  width: 50%;
+}
+
+.caja2 {
+  background: crimson;
+  width: 50vw;
+  height: 20vh;
+}
+
+.caja-full {
+  background: lightseagreen;
+  width: 100vw;
+  height: 100vh;
+}
+
+/** REM -> Es un valor que se multiplicará por el font-size que tenga la etiqueta raíz, es decir <html>. Si no tuviera un font-size establecido se usará el tamaño por defecto.  */
+
+p {
+  /* Como <html> no tiene un font-size, multiplicará el tamaño por defecto (16px) por 1.4 -> total 22.4px */
+  font-size: 1.4rem;
+}
+
+html {
+  font-size: 18px;
+}
+
+/** EM -> Es un valor que se multiplacará por el font-size más cercano.  */
+
+.btn {
+  margin: 5px;
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+
+.btn-em {  
+  font-size: 16px;
+}
+.btn-em-sm {  
+  font-size: 12px;
+}
+.btn-em-xl {  
+  font-size: 20px;
+}
+
+
+/*! Problema con los EM -> Si los padres tienen em se multiplicarán unos con otros*/
+
+.padre {
+  font-size: 2em;
+}
+
+.hijo {
+  color: gold;
+  /* Este elemento multiplica 1.3em * 2em (de su padre) * 16px por defecto (del Navegador) 
+  CONSEJO SE DEBERÍA DE TRABAJAR EN "EM"*/
+  font-size: 1.3em;
+}
+
+/** CALC() -> se utiliza para hacer cálculos matemáticos  */
+
+.caja-fija {
+  background: gold;
+  height: 60px;
+}
+
+.caja-full {
+  height: calc(100vh - 60px);
+}
+
+h1 {
+  font-size: calc(5vw + 1rem);
+}
+
+/** clamp() -> se utiliza para dar tamaños a cosas con máximos y mínimos*/
+/** Hay otras como min() y max()  */
+
+h2 {
+  font-size: clamp(16px, 4vw, 30px);
+}

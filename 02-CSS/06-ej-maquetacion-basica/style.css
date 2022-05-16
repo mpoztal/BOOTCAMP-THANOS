@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box; 
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('./assets/fonts/RobotoSlab-Medium.ttf');
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: lightsalmon;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4 ,h5 ,h6 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;  
+}
+
+/** === Cabecera === */
+
+.header {
+  background: black;
+  padding: 5px;
+}
+
+.main-title {
+  color: white;
+  margin: 0;
+  text-align: right;
+}
+
+
+/** === Menú === */
+
+.container {
+  background-color: white;
+
+  width: 60%;
+  max-width: 600px;
+  
+  margin: 0 auto;
+
+  /* Para SOLO DAR MARGIN A LADO Y LADO PODEMOS USAR margin-inline */
+  margin-inline: auto;
+
+  margin-inline-start: auto;
+  margin-inline-end: auto; 
+
+  border-radius: 5px;
+}
+
+
+
+nav.main-menu {
+  padding-block: 10px; 
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  margin-block: 20px;
+}
+
+ul.main-menu__list, ul.other-menu__list {  
+  width: 60%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+li.main-menu__item , li.other-menu__item {
+  background: lightgray;
+  margin-bottom: 7px;
+  padding-block: 5px;
+}
+
+a.main-menu__link, a.other-menu__link {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+a.main-menu__link--active {
+  text-shadow: 0 0 7px gray;
+  text-decoration: underline;
+}
+
+
+/** === Sección de notícias === */
+
+section.news-section {
+  padding: 0 50px 50px;
+ 
+  box-sizing: border-box;
+}
+
+article.news {
+  border-bottom: 3px dashed black;
+  padding-block: 50px;
+}
+
+/* article.news + article.news {
+  border-top: 3px dashed black;  
+} */
+
+article.news:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+
+h2.news__title {
+  text-align: center;
+  border-bottom: 3px solid lightgray;
+  border-block-end: 3px solid lightgray;
+}
+
+h3.news__date {
+  background-color: lightsalmon;
+  color: white;
+  width: 130px;
+
+  margin-inline: auto;
+  text-align: center;
+}
+
+q.news__cite {
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  text-decoration: underline dotted lightsalmon;
+  /* border-bottom: 1px dotted lightsalmon; */
+}
+
+/** === Aside === */
+.aside {
+  text-align: center;
+  padding-block: 20px;
+  margin-block: 20px;
+}
+
+.other-news-title {
+  margin: 0;
+}
+
+/** === Footer === */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/** Clases de utilidad  */
+.small-caps {
+  font-variant: small-caps;
+}
+.bg-gray {
+  background-color: lightgray;
+}
+.text-salmon {
+  color: lightsalmon;
+}
+.text-blue {
+  color: blue;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Primeras etiquetas en HTML</title>
+</head>
+<body>
+    <!-- TODAS LAS ETIQUETAS EN HTML SON CAJAS, 
+        y se dividen en 2 tipos:
+        De tipo Block: Ocupan el 100% del ancho.
+        De tipo inline: Ocupan el ancho de su contenido
+     -->
+
+<!-- * Las cajas más genéricas que NO APORTAN NADA DE SEMÁNTICA y que solo sirve para envolver otros elementos y para dar estilos son: -->
+
+<div>Etiqueta "div" que es de tipo block</div>
+<span>"span" es de tipo inline</span>
+
+     <!-- *Formateo del texto -->
+     <p>Párrafo con un texto en <strong>negrita</strong> con la etiqueta "strong" para dar <strong>MUCHA IMPORTANCIA a esas palabras</strong></p>
+     <p>Párrafo con un texto en <em>cursiva</em> con la etiqueta "em" para dar más énfasis a esa parte pero menos que "strong"</p>
+     <p>Párrafo con un <u>texto subrayado</u> con la etiqueta "u". </p>
+     <p>Párrafo con <mark>partes del texto que son más relevantes,</mark> marcadas con la etiqueta "mark"</p>
+     <p>Para <del>tachar un trozo de texto</del> que a lo mejor ya no es tan correcto pero quieres seguir mostrándolo, usamos la etq "del"</p>
+     <p>Para hacer un superíndice utilizamos "sup". Ej: 3m<sup>2</sup></p>
+     <p>Para hacer un subíndice utilizamos "sub". Ej: H<sub>2</sub>O</p>
+
+     <!-- *Listas -->
+     <!-- unordered list : no tiene orden-->
+     <ul>
+         <!-- list item: cada elemento de la lista -->
+         <li>Peras</li>
+         <li>Uvas</li>
+         <li>Manzanas</li>
+     </ul>
+     <!-- ordered list: tiene orden -->
+     <ol>
+         <li>Rafa Nadal</li>
+         <li>Djokovic</li>
+         <li>Alcaráz</li>
+     </ol>
+     <!-- Para anidar lista tenemos que meter un <ul> ó un <ol> dentro de un <li> -->
+         <ul>
+             <li>Perros grandes
+                 <ol>
+                     <li>Dogo Argentino</li>
+                     <li>Montaña del Pirineo</li>
+                 </ol>
+             </li>
+             <li>Perros medianos
+                <ul>
+                    <li>Husky Siberiano</li>
+                    <li>American Standford</li>
+                </ul>
+             </li>
+             <li>Perros pequeños
+                <ul>
+                    <li>Chihuahua</li>
+                    <li>Pincher
+                        <ul>
+                            <li>Pincher XS</li>
+                            <li>Pincher Toy</li>
+                        </ul>
+                    </li>
+                </ul>
+             </li>
+         </ul>
+<!-- * CITAS EN HTML -->
+<!-- Cita en bloque -->
+<blockquote>
+    "Es mejor estar callado y parecer tonto, que hablar y despeajr las dudas"
+    <cite>Groucho Marx</cite>
+</blockquote>
+<!-- Cita en línea -->
+<p>Groucho Marx, que es súpergracioso, dijo una vez que<q> Es mejor estar callado 
+ y parecer tonto, que hablar y despejar las dudas.</q></p>
+ <!-- * Separadores y Espacios en blanco -->
+ <!-- Separador basico, deberíamos usarlo cuando cambiamos de tema por ejemplo -->
+<hr>
+<!-- Salto de línea "br" -->
+<p>Con la etiqueta "br" <br>hacemos un salto de línea</p>
+
+<!-- Para escribir un texto y que el navegador respete completamente la forma 
+    en la que lo hemos escrito, usamos una etiqueta "pre" -->
+
+    <p>   Con diez cañones       por banda,
+        viento en popa, a toda vela,
+        no corta el mar, sino vuela...
+    </p>
+
+    <pre> Con diez cañones       por banda,
+        viento en popa, a toda vela,
+        no corta el mar, sino vuela...</pre>
+
+        <!--* Para escribir código  -->
+        
+        <!-- "code" es una etiqueta inline para decir que lo que hay dentro 
+            es código. -->
+
+            <p>En HTML, la primera etiqueta que ponemos es <code>!DOCTYPE html</code></p>
+     <!-- Para escribir código en formato de bloque, mezclamos las etiquetas
+           "pre" y "code" -->
+
+     <!-- ¡EXTRA! Para mostrar caracteres especiales en HTML podemos escribirlos con
+    un código que siempre empieza con & y tremina con ;-->
+
+    <p>&euro;</p>  <!--€--> 
+    <p>&copy;</p>  <!--©--> 
+    <p>&lt;</p>   <!--<-->   
+    <p>&gt;</p>   <!-- >--> 
+           
+        <pre>
+            <code>
+               &lt;!DOCTYPE html&gt;
+               &lt;html&gt;
+                   &lt;head&gt;
+                       &lt;meta charset="utf-8"&gt;
+                       &lt;title&gt;Ejemplo esqueleto HTML&lt;/title&gt;                      
+                   &lt;/head&gt;
+                   &lt;body&gt;
+                       &lt;H1&gt;html bÁSICO&lt;/H1&gt;
+                   &lt;/body&gt;
+               &lt;/html&gt;
+                            
+            </code>
+        </pre> 
+    <!-- Para hablar de una tecla del teclado utilizamos "kbd" -->
+    <p>Para copiar un texto pulsamos <kbd>Ctrl</kbd> + <kbd>C</kbd></p>
+    <!-- EXTRA! Para envolver texto o otras etiquetas con otra etiqueta usamos un 
+    comando que se llama "Emmet: wrap with abbreviation" -->
+    <p>Esto es <em>un ejemplo</em> de cómo usar el<strong> wrap with abbreviation</strong> de Emmet </p>
+
+    <!-- * Etiquetas extras -->
+    <!-- Etiq para decir que el texto es menos importante, suele usarse como texto de footer,
+    o como texto típico de "Haz click en la casilla de verificación para recibir la newsletter" -->
+
+    <p>El siguiente texto es "small"👉 <small>Copyright 2022 &copy;</small></p>
+
+    <!-- Etiq para escribir una dirección -->
+    <p>Angeles Pozo</p>
+    <p>+34 612 345 678</p>
+    <address>C/ Wallaby, 42, Sydney</address>
+    <time datetime="2022-03-31">Jueves, 31 de Marzo de 2022</time>
+    
+    
+    <!-- Trucos y abreviaturas -->
+ 
+    h1{Ejercicio1}+h2{Resolucion} (abreviatura)
+
+    <h1>Ejercicio1</h1>  (resultado)
+    <h2>Resolucion</h2>
+
+  
+
+
+
+    </body>
+    </html>

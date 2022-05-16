@@ -1,0 +1,110 @@
+
+
+.padre {
+  background: crimson;
+  height: 250px;
+  width: 60%;
+  margin-inline: auto;
+}
+
+.hijo-amarillo {
+  width: 100px;
+  height: 60px;
+  background: gold;
+}
+
+.hijo-verde {
+  width: 60px;
+  height: 100px;
+  background: lightseagreen;
+}
+
+/*? POSICIONAMIENTO  */
+
+/** Por defecto TODAS LAS CAJAS TIENEN UN POSICIONAMIENTO ESTÁTICO NO SE PUEDEN MOVER  */
+
+.padre {
+  position: static; /* Por defecto */
+}
+
+/** AL PONER Position relative YA NOS PERMITE MOVER  */
+/* Aparentemente no hay ningún cambio en pantalla */
+/* Ya podemos disponer de 5 propiedades extra que no teníamos */
+/* top / right / bottom / left / z-index (Z-INDEX DA PROFUNDIDAD) */
+/*! Al moverlo, no devuelve su espacio al resto de elementos. El hueco que ocupaba sigue ocupado  */
+/* Por defecto al poner un position distinto del original ese elemento ya se pondrá por encima del resto de elementos html estáticos */
+
+.hijo-verde {  
+  /* position: relative;
+  top: 20px; 
+  left: -10px; */
+}
+
+
+
+/** Position absolute  */
+/* Pasa lo mismo que con relative con el top/bottom/left/right/z-index */
+
+/*! Norma 1: Al posicionar con absolute, el elemento se saldrá del flujo de la web y todos los demás elementos ocuparan el espacio que había.  */
+/*! Norma 2: La caja pierde su width del 100%  que toda caja en bloque tiene por defecto*/
+/*! Norma 3:  top, bottom, left, right posicionaran la caja respecto a la caja por encima más cercana que tenga un position diferente de static */
+
+.padre {
+  position: relative;
+}
+
+.hijo-amarillo {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  opacity: 0.85;  
+}
+
+/** Position fixed (CUANDO SE QUIERE MANTENER ALGO FIJO EN PANTALLA) */
+/*! Norma 1: También se sale del flujo y todo se recoloca  */
+/*! Norma 2: También pierde el width y el height y se pone como su contenido  */
+/*! Norma 3: Siempre, siempre toma como referencia para top/left/right/bottom al navegador  */
+
+h1 {
+  margin-top: 85px;
+}
+
+header {
+  background: hotpink;
+  padding: 10px; 
+  text-align: center; 
+
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  /* opacity: 0.4; */
+}
+
+header img {
+  margin-right: 100px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+} 
+
+
+/** Position sticky   */
+/*! Norma 1: Igual que el relative porque no se mueve nada del resto  */
+/*! Norma 2: Como el fixed, siempre toma como referencia para top/left/right/bottom al navegador  */
+/*! Norma 3: Todo el rato estará en su posición original hasta que llegue a la posición que TÚ LE HAYAS DICHO, entonces se quedará pegado ¡HASTA QUE LA CAJA QUE LO CONTIENE SALGA DE LA PANTALLA!  */
+
+div.hijo-sticky {
+  width: 100px;
+  height: 70px;
+  background: black;
+
+  position: sticky;
+  top: 10px;  
+  z-index: 20; 
+}

@@ -1,0 +1,107 @@
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+
+
+.caja-padre {
+  margin-block: 1rem;
+  border: 5px solid black;
+  background: #9B5DE5;
+  height: 500px;
+}
+
+
+.caja1 {
+  border: 2px solid white;
+  background: hotpink;
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+
+  /* Forma 1ª cuando queremos q el elemento 1
+  se centre en su caja rosa---> 
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+ /* Forma 2ª con display:grid....*/
+  display: grid;
+  place-items: center;
+
+  transition: background 0.5s ease;
+
+
+  /** Las animaciones son muy parecidas a las transitions  */
+  animation-name: haciaDerecha;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+
+
+  /** Como extras tenemos las siguientes propiedades  */
+  animation-iteration-count: 3; /* un número de repeticiones (3veces) o infinite*/
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+
+
+
+  /* animation: haciaDerecha 1s ease 3 alternate forwards, letraGrande 1s; */
+
+  /* animation: darVuelta 2s ease-in-out infinite; 
+  cubic-bezier (investigar)*/
+  transform-origin: 10px 15px;
+  animation: girar 2s infinite cubic-bezier(0,.77,1,.32);
+}
+
+.caja1:hover {
+  background: pink;
+}
+
+
+@keyframes girar { 
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes darVuelta {
+  
+  25% {
+    transform: translate(100px, 0);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  75% {
+    transform: translate(0, 100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+
+@keyframes haciaDerecha {
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+
+
+
+@keyframes letraGrande {
+
+  0% {
+    font-size: 2rem;
+  }
+
+  100% {
+    font-size: 4rem;
+  }
+
+
+}

@@ -1,0 +1,17 @@
+.resaltado {
+    color: orange;
+}
+
+.footer {
+    color: purple;
+}
+
+.estructura {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.objetividad {
+    text-decoration: underline;
+    text-align: center;
+}

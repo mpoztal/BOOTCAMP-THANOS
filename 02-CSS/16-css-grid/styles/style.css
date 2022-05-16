@@ -1,0 +1,218 @@
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+
+
+.caja-padre {
+  margin-block: 1rem;
+  border: 5px solid black;
+  background: #9B5DE5;
+  height: 500px;
+
+
+  display: grid;
+  /**Funciona como una rejilla 
+  Para decirle cómo queremos que se comporte cada columna
+  En este ejem.le estamos diciendo que queremos: una columna de 
+  200px, otra dinamica del 20% y otra de 100px  */
+  grid-template-columns: 200px 20% 100px;
+ 
+  /* Tenemos una nueva medida que se llama fr (fraccion) en el ejem. mediría 1 fraccion 
+  del espacio que queda*/
+  grid-template-columns: 200px 1fr 100px;
+  grid-template-columns: 1fr 0.5fr auto 1fr;
+
+  /* Podemos usar la función repeat() para decirle que haga lo mismo varias veces  */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 100px);
+
+  /** Para decirle cómo queremos que se comporte cada fila  */
+  grid-template-rows: 100px 150px;
+
+  /** Para decirle cómo se comportan las filas automáticas */
+  grid-auto-rows: 100px;
+
+
+  /* ============================= */
+  /*? ESPACIADO */  
+  /* Usaremos column-gap y row-gap--> cuando usemos distintas medidas
+  Usaremos gap--> cuando queramos los mismos espacios entre 
+  filas y columnas */ 
+  /**Usando row-gap / column-gap y gap  */
+  column-gap: 10px;
+  row-gap: 20px;
+  gap: 15px;
+
+  /* ============================= */
+  /*? Alineaciones de items  */
+  /** Justify-items */
+
+  justify-items: flex-start;
+  justify-items: flex-end;
+  justify-items: stretch; /* por defecto */
+  justify-items: center;
+
+  /** align-items */
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: stretch; /* por defecto */
+  align-items: center;
+  align-items: baseline;
+
+  /* shorthand para decirle las 2 cosas a la vez -> place-items  */
+  place-items: flex-end center;
+  place-items: center;
+  place-items: stretch;
+
+  /*? Alineaciones de todo el contenido (del padre) */
+  /** justify-content  */
+  justify-content: flex-start; /* por defecto */
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: stretch;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+
+  /** align-content  */
+  align-content: flex-start; /* por defecto */
+  align-content: flex-end;
+  align-content: center;
+  align-content: stretch;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: space-evenly;
+  
+ /* shorthand para decirle las 2 cosas a la vez -> place-content  */
+ place-content: flex-end center;
+ place-content: center;
+
+}
+
+
+.caja:nth-child(6n - 5) {
+  background: #F15BB5;
+}
+.caja:nth-child(6n - 4) {
+  background: #FEE440; 
+}
+.caja:nth-child(6n - 3) {
+  background: #00BBF9;
+}
+.caja:nth-child(6n - 2) {
+  background: #00F5D4;
+}
+.caja:nth-child(6n - 1) {
+  background: #e5383b;
+}
+.caja:nth-child(6n) {
+  background: #f8961e;
+}
+
+
+
+
+
+
+.caja {
+  padding: 10px;
+  border: 2px solid white;
+  font-size: 1.3rem;
+}
+
+.caja1 {
+  /** Para colocar cada caja en una celda distinta  */
+  /* Puedes usar span en lugar de número de línea para decir cuantas celdas quieres que ocupe */
+  grid-column-start: 1; 
+  grid-column-end: span 4; 
+  grid-row-start: 2;
+  grid-row-end: 4;
+
+  /*Podemos usar los shorthand */
+  grid-column: 2 / span 2;
+  grid-row: 2 / 4;
+
+}
+
+.caja2 {
+  font-size: 3rem;
+}
+
+
+/** ALINEACIÓN INDIVIDUAL DE CADA CAJA  */
+
+.caja3 {
+
+  align-self: center;
+  justify-self: flex-start;
+}
+
+
+
+/*========GRID AREAS==========*/
+
+.caja-padre2 {
+  margin-block: 1rem;
+  border: 5px solid black;
+  background: #9B5DE5;
+  height: 500px;
+
+  display: grid;
+  grid-template-columns: 100px 1fr 20% 100px;
+
+/* Podemos llamar por su nombre cada area */
+  grid-template-areas: 
+  "cabecera cabecera cabecera cabecera"
+  "main main main aside"
+  "logoPie . . rrss";
+}
+
+/* Muyyy util (misma pag. para movil) el orden marca como ira montado todo*/
+@media (max-width: 500px) {
+  .caja-padre2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "logoPie"
+      "cabecera"
+      "main"
+      "aside"
+      "rrss";
+  }
+}
+/* Los puntos son huecos vacíos, para evitar romper la rejilla */
+
+.caja6 {
+  grid-area: cabecera;
+}
+.caja7 {
+  grid-area: main;
+}
+.caja8 {
+  grid-area: logoPie;
+}
+.caja9 {
+  grid-area: aside;
+}
+.caja10 {
+  grid-area: rrss;
+}
+
+
+/* ========TRUQUITO========= */
+/*MUY UTIL PARA GALERIAS DE FOTOS*/
+
+.caja-padre3 {
+  margin-block: 1rem;
+  border: 5px solid black;
+  background: #9B5DE5;
+  height: 500px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+/*El auto-fit indicaque; tú decides el nº de columnas que quieres
+unicamente cambio el valor de 150px, según tamaño de mis fotos*/

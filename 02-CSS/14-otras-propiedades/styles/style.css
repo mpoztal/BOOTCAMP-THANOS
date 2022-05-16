@@ -1,0 +1,34 @@
+
+.padre {
+  width: 80%;
+  margin: 2rem auto;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+
+/*? FLOATS  */
+/** Utilizando float left o right hacemos que el texto que haya debajo se coloque rodeando la caja */
+.padre img.tenedores {
+  float: left;
+  margin-right: 1rem;
+}
+
+.padre img.arbolitos {
+  float: right;
+}
+
+/*! Cada vez que usemos un float tenemos que LIMPIARLO con clear:both; (both= ambos lados) */
+/*! Opción 1: Si quieres que se restablezca todo a partir de un elemento tienes que ponerle el clear a ese elemento  */
+/*! Opción 2: Si no tuviéramos un elemento debajo, podríamos crear uno vacío con un div o un span  */
+
+.limpiar-float {
+  clear: both;
+}
+
+/*! Opción 3: Para no tener que crear una etiquetavacía, podemos usar ::after, ya que es como si creara un span justo al final de la caja  */
+.padre::after {
+  content: '';
+  display: block;
+  clear: both;
+}

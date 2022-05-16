@@ -1,0 +1,109 @@
+/* Reset básico */
+/* *, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+} */
+
+
+
+body {
+  background-color: #eaeaea;
+}
+
+h1 {
+  text-align: center;
+}
+
+.main-header {
+  background-color: #fff;
+  margin-top: 50px;
+  padding: 20px 50px;  
+/* Con el STICKY hace que se quede el header pegado arriba*/
+  position: sticky;
+  top: 0;
+}
+
+img.logo {
+  display: inline-block;
+}
+
+nav.main-nav {
+  position: relative;
+  top: -20px;
+  display: inline-block;
+  margin-left: 50px;  
+}
+
+span.submenu-box {
+  position: relative;
+}
+
+span.submenu-box:hover .submenu {
+  display: block;
+}
+
+nav.submenu {
+  padding-top: 10px;
+  position: absolute;
+  left: 0;
+  top: 133%;
+  display: none;
+  width: 100%;
+}
+
+a.main-nav__link, a.submenu__link {
+  font-size: 14px;
+  text-decoration: none;
+  color: crimson;
+  padding: 5px 10px;
+  border: 1px solid crimson;
+  background-color: white;
+}
+
+a.main-nav__link:hover, a.submenu__link:hover {
+  background: rgb(255, 225, 231);
+}
+
+a.submenu__link {
+  display: block;  
+}
+
+/**** Iconos de compartir (forma de darle el estilo) 
+con position-fixed dejas fijo los iconos facebook... */
+
+
+nav.share {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  border-radius: 0 3px 3px 0;
+
+  overflow: hidden;
+}
+
+nav.share a {
+  display: block;
+  padding: 5px 10px;
+  color: white;
+}
+nav.share a:hover {
+  box-shadow: 5px 0 0 0 rgba(0,0,0,0.5) inset;
+  color: rgb(216, 216, 216);
+}
+
+a.facebook {
+  background: #314a82; 
+}
+
+a.instagram {
+  background: #0091cb;
+}
+
+a.linkedin {
+  background: #0f699a;  
+}

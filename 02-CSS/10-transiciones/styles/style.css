@@ -1,0 +1,109 @@
+/*BOTON (clic aqui) color rosa */
+.container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/** Las transiciones se añaden siempre al estado NORMAL  */
+/*! IMPORTANTE - Solo vamos a apreciar transiciones de aquellas propiedades que puedan transitar de un estado a otro  */
+button {
+  background-color: hotpink;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  /* Cursor hace q se aparezca la mano cuando estoy encima*/
+  cursor: pointer;
+
+  transition-property: color, background-color;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+ /* Esta transicion de abajo el la forma mas corta de todas las mostradas arriba*/
+  transition: all 1s ease, color 0.2s ease;
+}
+
+button:hover {
+  background-color: red;
+  color: black;
+}
+
+button:hover + .caja {
+  background-color: lightseagreen;
+}
+
+
+.caja {
+  background: crimson;  
+  width: 100px;
+  height: 30px;  
+  margin-top: 20px;
+  box-shadow: 0 0 15px 0px gray;
+
+  /*! display NO TRANSITA!  */
+  transition: width 0.5s ease, margin-left 1s ease, display 1s, box-shadow 1s;
+}
+
+.caja:hover {  
+  width: 50px;
+  margin-left: 20px;
+  box-shadow: 0 0 25px 0px rgb(69, 69, 69);
+}
+
+
+
+/** Transformaciones (más usadas) */
+
+
+.caja2 {
+  width: 50px;
+  height: 50px;
+  background-color:dodgerblue;
+  margin-top: 20px;
+  transition: transform 0.4s ease;
+
+
+  /* Rotar elementos en uno de sus ejes */
+  transform: perspective(100px) rotateY(45deg) rotateX(30deg) rotateZ(20deg);
+
+  /* Mover elementos por la pantalla (perspective acercas(valor positivo) y 
+  alejas(valor negativo) el objeto) */
+  transform: perspective(100px) translateX(20px) translateY(-40px) translateZ(10px);
+  transform: perspective(100px) translate(20px, -40px);
+
+  /* Para escalar elementos */
+  transform: scale(1);
+}
+
+.container:hover .caja2 {
+  transform: scale(1.1);
+}
+
+
+             /** Filtros */
+
+.imagen {
+  margin-block: 20px;
+
+  /* Borrosidad */
+  filter: blur(1px); 
+  /* Brillo */
+  filter: brightness(50%);
+  /* Escala de grises de 0 a 100% */
+  filter: grayscale(50%);
+  /* Sombra que respeta el alpha */
+  filter: drop-shadow(5px 5px 0px black);
+
+  transition: filter 0.5s ease;
+}
+
+
+.twitter {
+  width: 50%;
+  /* box-shadow: 5px 5px 0px black; al ser una imag cuadrada...la sombra 
+  la aplica sobre la caja x otro lado, si es un ej.PNG si que veremos el 
+  filter siguiente */
+
+  filter: drop-shadow(0px 0px 5px rgb(0, 179, 255));
+}

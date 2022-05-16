@@ -1,0 +1,284 @@
+/*? MODELO DE CAJA  */
+
+/** el DISPLAY  */
+/* Decide el tipo de caja que es, también podemos decir que no tenga display, es decir, que no se vea esa caja. */
+h2.inline {
+  background-color: hotpink;
+  display: inline;
+
+  width: 2000px; /*! NO SE PUEDE!*/
+  height: 400px; /*! NO SE PUEDE!*/
+
+  padding: 5px; /**¡SE PUEDE!*/
+
+  margin-top: 20px; /*! NO SE PUEDE!*/
+  margin-right: 20px; /**¡SE PUEDE!*/
+  margin-bottom: 20px; /*! NO SE PUEDE!*/
+  margin-left: 20px; /**¡SE PUEDE!*/
+
+}
+
+h2.sin-display {
+  display: none;
+}
+
+a.block {
+  display: block;
+}
+
+/** Tenemos una mezcla entre block e inline que coge lo mejor de cada uno  */
+
+h2.inline-block {
+  background: gold;
+  display: inline-block;
+  margin: 10px; /**¡SE PUEDE!*/
+  width: 300px; /**¡SE PUEDE!*/ 
+}
+
+
+/**  ===============================  **/
+
+/** Tamaños de las cajas */
+/*! Los tantos por ciento SIEMPRE SON REFERENTES A LA CAJA QUE LOS CONTENGA  */
+
+.parrafo1 {
+  background: gold;
+
+  /* Anchos */
+  width: 100%; /*por defecto*/
+  width: 600px; /* ancho que nunca cambia */
+  width: 50%; /* ancho dinámico, se adapta */
+  /* Alto */
+  height: auto; /*por defecto*/
+
+  /* Ancho máximo y ancho mínimo */
+  /* Esto lo usamos siempre con un width dinámico */
+  /* max-width: 400px;
+  min-width: 200px; */
+
+  /* Alto máximo y alto mínimo */
+  max-height: 150px;
+  min-height: 200px;
+}
+
+.hijo-parrafo {
+  background: orange;
+  width: 50%;
+  min-width: 300px;
+}
+
+
+/** PADDING */
+/** Es el espaciado que hay entre lo que ocupe el contenido y el borde de la caja  */
+/*! El fondo de las cajas llega SIEMPRE HASTA EL BORDE, es decir, contenido y padding estan dentro del background  */
+h3.caja { 
+  background: tomato;
+
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+
+  /*🕒     👆   👉  👇  👈     */
+  padding: 10px 0px 20px 50px;
+
+  /*        ↕     ↔     */
+  padding: 10px 20px;
+
+  /*        👆    ↔   👇  */
+  padding: 10px 20px 30px;
+
+  /*        ↕↔ */
+  padding: 20px;  
+}
+
+/** BORDER  */
+/** Ancho, color y estilo del borde de cada caja  */
+
+h3.caja { 
+
+  border-width: 5px;
+  border-style: dashed;
+  border-style: dotted;
+  border-style: double;
+  border-style: solid;
+  border-color: gold;
+  border: 12px solid rgb(0 255 234 / 55%);
+}
+
+
+
+/** MARGIN  */
+/** El espacio de "aire" entre caja y caja */
+h3.caja {
+  margin-top: 5px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
+  /*🕒     👆   👉  👇  👈     */
+  margin: 10px 0px 20px 50px;
+
+  /*        ↕     ↔     */
+  margin: 10px 20px;
+
+  /*        👆    ↔   👇  */
+  margin: 10px 20px 30px;
+
+  /*        ↕↔ */
+  margin: 20px; 
+
+  /* Adicionalmente el margin acepta márgenes negativos */
+  margin-top: -10px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: crimson;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: pink;
+  padding: 10px;
+  /* margin-right: 50px; */
+}
+.link:not(:last-of-type) {
+  margin-right: 50px;
+}
+
+/* .link:last-of-type {
+  margin-right: 0;
+} */
+
+/** OUTLINE -> Se podría decir que no forma parte del box-model pero es muy interesante, es otro borde exterior pero que NO AFECTA AL TAMAÑO DE LA CAJA, ES INDEPENDIENTE  */
+
+h3.caja2 {
+  background: pink;
+  border: 20px solid black;
+  outline: 3px solid tomato;
+  /* Como extra podemos separarlo de la caja */
+  outline-offset: 5px;
+}
+
+/** ================================  */
+
+
+/** BOX SIZING  */
+/* Las cajas por defecto, para saber el ancho real que tienen hay que sumar el width + padding + border */
+
+.caja-1 {
+  background: gold;
+  display: inline-block;
+  padding: 20px;
+  width: 100px;  
+  border: 5px solid black;
+  /* border-box -> el width que le pongas será con padding y el border incluidos*/
+  box-sizing: border-box;
+}
+
+.caja-2 {
+  background: lightseagreen;
+  display: inline-block;
+  width: 100px;
+  padding: 20px;
+  border: 5px solid black;   
+
+  /* content-box es por defecto y cuenta el width solo para el contenido, luego le suma el padding y el border */
+  box-sizing: content-box;
+
+}
+
+
+/** ¡TRUCO! CENTRAR CAJA DE TIPO BLOCK EN PANTALLA  */
+h2.centrar {
+  background: hotpink;
+
+  width: 50%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin: 20px auto; 
+}
+
+
+/* ================================= */
+
+
+/** Overflow - cuando el contenido se sale de los bordes  */
+p.overflow {
+  background: tomato;
+  width: 50%;
+  height: 100px;
+
+
+  overflow-y: visible; /*Por defecto*/
+  overflow-y: scroll; /* crea una barra de scroll vertical*/  
+  overflow-y: auto; /* Decide cuándo añadir una barra de scroll automáticamente */
+  overflow-y: hidden; /* No muestra lo que se sale */
+
+  overflow-x: hidden; /* Lo mismo en las x */
+  overflow: hidden; /* Se oculta lo que se salga tanto en x como en y */
+  
+}
+
+
+/** Sombras -> Box-shadow y text-shadow  */
+
+h3.box-shadow {
+  padding: 10px;
+  background-color: white;
+  display: inline-block;
+  
+  /* La palabra inset hace que la sombra sea hacia dentro */
+/*             ↔   ↕  blur  expansion      color           */
+  box-shadow: 0px 0px  3px     0px    rgb(0 0 0 / 50%) inset;
+  box-shadow: 0px 0px 14px 0px rgb(0 0 0 / 20%);
+  box-shadow: 
+  5px 5px 0px 0px yellow, 
+  -5px -5px 0px 0px red;
+
+
+  /* Podemos crear varias sombras en la misma caja separándolas por coma */
+  box-shadow: 
+  0px 0px 0px 2px blue, 
+  0px 0px 0px 4px red,
+  0px 0px 0px 6px green,
+  0px 0px 0px 8px purple;
+  box-shadow: 
+  2px 0px 0px 0px blue, 
+  0px 2px 0px 0px red,
+  -2px 0px 0px 0px green,
+  0px -2px 0px 0px purple;
+}
+
+h3.text-shadow {
+  padding: 10px;
+  background-color: white;
+  display: inline-block;
+
+  /*            ↔   ↕  blur   color           */
+  text-shadow: 0px 0px 5px hotpink;
+  text-shadow: 0px 0px 5px hotpink , 1px 0px 0px red;
+}
+
+/** REDONDEADO DE LAS CAJAS  */
+
+h2.border-radius {
+  background: lightseagreen;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+/*                ↖    ↗   ↘    ↙        */
+  border-radius: 5px 10px 15px 0px;
+
+/*               ↖ ↗ ↘ ↙        */
+  border-radius:  3px;
+}
+
+  

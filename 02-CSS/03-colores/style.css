@@ -1,0 +1,20 @@
+.color-nombre{
+    color: tomato;
+}
+
+.color-rgb {
+    color: rgb(248, 0, 95);
+}
+
+.color-hex {
+    color: #fff500;
+}
+/* Este color siguiente añades ej.80 
+y le estarias dando transparencia     */
+.color-hex {
+    color: #fff50080;
+}
+
+.color-hsl {
+    color: hsl(10, 18%, 60%);
+}

@@ -1,0 +1,75 @@
+/*? Estilos para textos */
+
+/** Tipo de letras, fuentes..
+--> font-family*/
+h1 {
+    font-family: sans-serif, Arial;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/** Tamaño letra */
+
+h2 {
+    font-size: 30px;
+}
+
+/**  Grosor letra   */
+
+p {
+    font-weight: 400;
+}
+
+li {
+    font-style: normal;
+    font-style: italic;
+}
+/**  Letras subrayadas   */
+.subrayado{
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: underline red 4px;
+}
+
+/** Altura de la línea y separacion de letras  */
+
+p {
+    line-height: 2;
+    letter-spacing: 3px;
+}
+
+/** Forzar mayusculas, minusculas, capitalizadas y small-caps  */
+
+li.mayusculas {
+    text-transform: uppercase;
+
+}
+
+li.minusculas {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
+
+/** Alineacion de los textos   */
+
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.justify {
+    text-align: justify;
+}
