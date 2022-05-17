@@ -1,0 +1,24 @@
+@use 'mixins';
+
+
+
+header.header {
+  background: gold;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  nav.main-menu {
+    display: flex;
+    gap: 1rem;
+    
+    @include mixins.box;
+    
+    a {
+      color: #303030;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
+}

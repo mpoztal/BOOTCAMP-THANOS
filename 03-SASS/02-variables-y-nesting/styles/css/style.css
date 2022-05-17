@@ -1,0 +1,43 @@
+:root {
+  --main-color: pink;
+}
+
+body {
+  background: var(--main-color);
+}
+
+h1 {
+  color: #fff;
+}
+
+.main-menu {
+  background-color: lightseagreen;
+  padding: 1rem;
+}
+.main-menu .main-menu__list {
+  list-style: none;
+  padding: 0;
+}
+.main-menu .main-menu__list .main-menu__item {
+  padding: 10px;
+  border: 1px solid white;
+}
+.main-menu .main-menu__list .main-menu__item:hover {
+  background-color: rgba(255, 255, 255, 0.201);
+}
+.main-menu .main-menu__list .main-menu__link {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Comic Sans MS";
+  font-variant: small-caps;
+}
+@media (max-width: 567px) {
+  .main-menu .main-menu__list .main-menu__link {
+    color: gold;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+// Si utilizas @use "a palo seco" te va a crear un namespace con el mismo nombre que el archivo
+@use 'base/colors';
+@use 'base/typo';
+
+@use 'base/reset';
+@use 'layout/header';
+
+body {
+  // Para llamar a cualquier variable tienes que poner el nombre del namespace
+  background: colors.$principal;
+  font-family: typo.$principal;
+}

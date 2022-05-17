@@ -1,0 +1,20 @@
+/* Comentario de 
+tipo bloque */
+
+// Comentario de línea
+/* Para compilar sass, el comando más usado siempre que estés dentro de la carpeta de estilos es
+//*  sass --watch sass:css
+*/
+
+/*
+Como extra, podéis comprimir el código final utilizando el flag --style compressed
+*/
+
+body {
+  background: pink;
+}
+
+h1 {
+  color: white;
+  background: linear-gradient(red, blue);
+}

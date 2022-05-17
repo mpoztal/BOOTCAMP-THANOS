@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/LexendDeca-Regular.ttf");
+  font-weight: 400;
+}
+.card {
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  border-radius: 7px;
+  overflow: hidden;
+  /*//? Opción con background-image
+  .card__image {
+    //* Opción 1: Haciendo que la capa de color transparente 
+    // background: linear-gradient( transparentize($accent, 0.4), transparentize($accent, 0.4)) , url('../../assets/img/image-header-desktop.jpg');
+
+    //* Opción 2: Jugando con la fusión de dos capas con "background-blend-mode"
+    background-color: $accent;
+    background-image: url('../../assets/img/image-header-desktop.jpg');
+    background-blend-mode: multiply;
+
+
+
+    background-size: cover;
+    background-position: right;  
+
+
+    flex: 50%;
+    @media (max-width: 1000px) {
+      background-image: url('../../assets/img/image-header-mobile.jpg');
+      flex: 250px;
+      background-position: top;
+    }
+  }*/
+}
+@media (max-width: 1000px) {
+  .card {
+    text-align: center;
+    flex-direction: column-reverse;
+    max-width: 550px;
+    min-width: 370px;
+  }
+}
+.card .card__content {
+  background-color: hsl(244deg, 38%, 16%);
+  padding: 3.5rem;
+  padding-right: 6rem;
+  flex: 50%;
+}
+@media (max-width: 1000px) {
+  .card .card__content {
+    padding: 2.2rem;
+  }
+}
+.card .card__content .content__title {
+  font-size: 2rem;
+}
+.card .card__content .content__text {
+  font-size: 15px;
+  color: hsla(0deg, 0%, 100%, 0.55);
+  margin-block: 2rem;
+}
+@media (max-width: 1000px) {
+  .card .card__content .content__text {
+    line-height: 1.7;
+  }
+}
+.card .card__content .content__info {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .card .card__content .content__info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.card .card__content .content__info h2 {
+  font-size: 1.1rem;
+}
+.card .card__content .content__info h3 {
+  font-size: 0.75rem;
+  color: hsla(0deg, 0%, 100%, 0.55);
+  font-weight: normal;
+  font-family: "Lexend Deca", sans-serif;
+  letter-spacing: 2px;
+}
+.card .card__image {
+  position: relative;
+  /*
+  &::after {
+    content: '';     
+    // podemos hacer que ocupe todo el padre con width 100 y height 100
+    // width: 100%;
+    // height: 100%;
+    background: transparentize($accent, 0.35);   
+    position: absolute;
+
+    // o también diciendo las cuatro posiciones en 0
+    // top: 0;
+    // left: 0;
+    // right:0;
+    // bottom: 0;
+
+
+    // o utilizando una propiedad que equivale a lo mismo
+    inset: 0;
+  }*/
+  background-color: hsl(277deg, 64%, 61%);
+}
+.card .card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .card__image img {
+  mix-blend-mode: multiply;
+}
+
+body {
+  background-color: hsl(233deg, 47%, 7%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accent {
+  color: hsl(277deg, 64%, 61%);
+}
+
+/*# sourceMappingURL=style.css.map */

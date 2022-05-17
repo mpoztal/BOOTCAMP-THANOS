@@ -1,0 +1,58 @@
+//* Custom properties (Variables nativas de CSS)
+:root {
+  --main-color: pink;
+}
+
+//* Variables de SASS
+$blanco: #fff;
+
+body {
+  background: var(--main-color);
+}
+
+h1 {
+  color: $blanco;
+}
+
+//? NESTING
+
+.main-menu {
+  background-color: lightseagreen;
+  padding: 1rem;
+  
+  //* Nesting de selectores
+  .main-menu__list {
+    list-style: none;
+    padding: 0;
+    
+    .main-menu__item {
+      padding: 10px;
+      border: 1px solid white;
+
+      //* Nesting de pseudoselectores
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.201);
+      }
+
+    }
+    .main-menu__link {
+      color: white;
+      text-decoration: none;
+
+      //* Nesting de propiedades 
+      font: {
+        size: 2rem;
+        weight: bold;
+        style: italic;
+        family: 'Comic Sans MS';
+        variant: small-caps;
+      }
+
+      //* Nesting de media queries
+      @media (max-width: 567px){
+        color: gold;
+      }
+
+    }
+  }
+}

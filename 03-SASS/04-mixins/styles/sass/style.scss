@@ -1,0 +1,48 @@
+@use 'reset';
+@use 'header';
+@use 'mixins';
+
+.container {
+  width: 60%;
+  height: 50vh;
+  margin: 2rem auto;
+  @include mixins.box;
+  @include mixins.total-center;
+}
+
+h1.main-title {
+  @include mixins.box;
+}
+
+h2.title {
+  text-align: center;
+  @include mixins.border(7px, red);
+}
+
+h3 {
+  color: red;
+}
+
+@include mixins.media (768px) {
+  h3 {
+    color: blue;
+  }
+}
+
+@include mixins.phone {
+  h3 {
+    color: green;
+  }
+}
+
+@include mixins.mq(phone) {
+  h3 {
+    color: yellow;
+  }
+}
+
+@include mixins.mq(desktop) {
+  h3 {
+    color: orange;
+  }
+}

@@ -1,0 +1,23 @@
+@use './base/reset';
+@use './base/fonts';
+
+@use './base/variables' as var;
+
+@use './components/card';
+
+body {
+  background-color: var.$main-bg;
+  color: var.$white;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accent {
+  color: var.$accent;
+}
