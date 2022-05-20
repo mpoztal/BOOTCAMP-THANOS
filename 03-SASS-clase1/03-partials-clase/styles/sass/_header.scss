@@ -1,0 +1,17 @@
+header.header {
+    background: lightseagreen;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    nav.main-menu {
+        display: flex;
+        gap: 1rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

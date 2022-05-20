@@ -1,0 +1,14 @@
+@import 'reset';
+@import 'header';
+/* Los @import SERAN SUSTITUIDOS POR @use---->creando más especifidad con los 
+namespace */
+
+
+body {
+    background-color: pink;
+    font-family: 'Arial', sans-serif ;
+}
+
+
+
+
