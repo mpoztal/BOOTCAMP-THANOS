@@ -1,0 +1,11 @@
+ul {
+  list-style: none;
+}
+li {
+  color: tomato;
+  font-size: 2rem;
+}
+
+li::before {
+  content: attr(data-loquesea);
+}

@@ -1,0 +1,52 @@
+//* TODAS LAS VARIABLES QUE QUIERAS SOBREESCRIBIR 
+$primary: #2a9d8f;
+$secondary: #264653;
+$success: #e9c46a;
+$warning: #f4a261;
+$danger: crimson;
+
+$font-family-sans-serif: 'Impact';
+$font-size-base: 1.2rem;
+
+$grid-columns: 16;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 800px,
+  lg: 1000px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Activar css grid desactivando row 
+$enable-grid-classes:  false;
+$enable-cssgrid: true;
+
+// Activar márgenes negativos
+$enable-negative-margins: true;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 3.7,
+  7: $spacer * 4.2,
+  8: $spacer * 4.9,
+  9: $spacer * 5.4,
+  10: $spacer * 6,
+);
+
+//* IMPORTAMOS TODO BOOTSTRAP 
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+
+//* TODOS MIS ESTILOS PERSONALIZADOS
+.mi-parrafo {
+  // En cualquier sitio de mi archivo sass podemos utilizar todos los colores de bootstrap (All Colors)
+  background: $pink-400;
+}
