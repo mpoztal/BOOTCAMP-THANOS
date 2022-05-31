@@ -16,11 +16,11 @@
     <header class="bg-primary py-3">
         <div class="container">
 
-            <div class="d-flex flex-column flex-md-row">
-                <div class="border border-warning  text-center text-md-start">
+            <div class="d-flex gap-2 flex-column flex-md-row">
+                <div class="text-center text-md-start">
                     <img class="logo" src="../assets/img/logo-codehouse.svg" alt="Logo CodeHouse">
                 </div>
-                    <nav class="nav ms-2 border border-white  justfy-content-center">
+                    <nav class="nav ms-2 justify-content-center">
                         <a class="nav-link text-black fw-bold"
                         href="#">Inicio</a>
                         <a class="nav-link text-black fw-bold"
@@ -31,8 +31,8 @@
                         href="#">Contacto</a>
                     </nav>
 
-                    <form class=" border border-danger d-flex justify-content-center gap-2 justfy-content-md-end">
-                            <div class="col-4">
+                    <form class="d-flex align-items-center justify-content-center gap-2 justfy-content-md-end">
+                            <div class="col-4 col-md-5">
                               <input class="form-control rounded-0" type="text" placeholder="Buscar...">
                             </div>
                             <button class="btn rounded-0 btn-warning">Buscar</button>
@@ -45,20 +45,21 @@
     </header>
 
     <main class="container my-3">
-
-        <div class="row">
+<!-- Éstos g (gutters) se ponen para dar los espacios sobre todo cuando queremos separar la caja 
+amarilla. No se pone margen -->
+        <div class="row gx-3 gy-2">
             <div class="left-content col-12 col-md-8">
-                <section class="bg-danger p-3 clearfix">
-                    <h1 class="text-center">¡Bienvenid@ a mi web!</h1>
+                <section class="bg-danger p-3 clearfix mb-2">
+                    <h1 class="text-center mb-3">¡Bienvenid@ a mi web!</h1>
                     <img class="float-start me-2" src="https://picsum.photos/id/137/150" alt="luz">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing  elit. Numquam ipsam consectetur debitis voluptatem   reiciendis,ad error, optio eius deleniti modi suscipit    odio cupiditate? Quod, illo.
                     </p>
                 </section>
 
 
-                <section class="row g-2 mt-2">
-                    <article class="col-12 text-center">
-                        <div class="bg-info p-3">
+                <section class="row g-2">
+                    <article class="col-12 col-md-6 col-lg-4 text-center">
+                        <div class="bg-info p-3 h-100">
                             <i class="bi bi-award-fill fs-1"></i>
                             <h3 class="mt-2">Artículo 1</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut perspiciatis et accusantium esse autem rem veniam. Nulla accusamus sed perspiciatis odit temporibus! Voluptas, quis esse?</p>
@@ -66,8 +67,8 @@
                     </article>
 
 
-                    <article class="col-12 text-center">
-                        <div class="bg-info p-3">
+                    <article class="col-12 col-md-6 col-lg-4 text-center">
+                        <div class="bg-info p-3  h-100">
                             <i class="bi bi-bank fs-1"></i>
                             <h3 class="mt-2">Artículo 2</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut perspiciatis et accusantium esse autem rem veniam. Nulla accusamus sed perspiciatis odit temporibus!</p>
@@ -75,8 +76,8 @@
                     </article>
                
 
-                    <article class="col-12 text-center">
-                        <div class="bg-info p-3">
+                    <article class="col-12 col-lg-4 text-center">
+                        <div class="bg-info p-3  h-100">
                             <i class="bi bi-boombox fs-1"></i>
                             <h3 class="mt-2">Artículo 3</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut perspiciatis et accusantium esse autem rem veniam. Nulla accusamus sed perspiciatis odit temporibus! Voluptas.</p>
@@ -90,13 +91,40 @@
             </div>
             
             
-            <aside class="right-content col-12 col-md-4">
+            <aside class="right-content col-12 col-md-4 text-center">
+                <!-- Si queremos que llegue el aside hasta abajo se pondría en el <div> tras p-3 
+                    a continuación h-100-->
+                <div class="bg-warning  p-3">
+                    <h2>Artículos anteriores</h2>
+
+                    <nav class="list-group list-group-flush">
+                        <a class="list-group-item bg-transparent" href="#">Artículo1</a>
+                        <a class="list-group-item bg-transparent" href="#">Artículo2</a>
+                        <a class="list-group-item bg-transparent" href="#">Artículo3</a>
+                        <a class="list-group-item bg-transparent" href="#">Artículo4</a>
+                        <a class="list-group-item bg-transparent" href="#">Artículo5</a>
+                    </nav>
+                     
+                    <h2 class="my-3">Redes sociales</h2>
+                        <div class="d-flex justify-content-around">
+                        
+                            <a class="text-black text-decoration-none" href="#">
+                                <i class="bi bi-facebook"></i></a>
+                            <a class="text-black text-decoration-none" href="#">
+                                <i class="bi bi-instagram"></i></a>
+                            <a class="text-black text-decoration-none" href="#">
+                                <i class="bi bi-linkedin"></i></a>
+                            <a class="text-black text-decoration-none" href="#">
+                                <i class="bi bi-youtube"></i></a>
+                        </div>
+                </div>
             </aside>
         </div>
 
     </main>
 
-    <footer>
+    <footer class="bg-secondary text-white text-center p-3">
+        <small>&copy; Copyright 2022</small>
 
     </footer>
  
