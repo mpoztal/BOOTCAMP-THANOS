@@ -1,0 +1,1 @@
+{"mappings":"ACEA","sources":["index.964b23a9.css","src/styles/style.scss"],"sourcesContent":["body {\n  background: gold;\n}\n\n/*# sourceMappingURL=index.964b23a9.css.map */\n","$primary: gold;\r\n\r\nbody {\r\n  background: $primary;\r\n}"],"names":[],"version":3,"file":"index.964b23a9.css.map"}
