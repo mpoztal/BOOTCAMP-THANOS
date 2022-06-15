@@ -111,7 +111,9 @@ const nombre = 'Ivan'
     }
 
     if ('Ivan' === 'Ivan') {
-      // Si creas una variable dentro de un bloque que se llama igual que una de fuera, no pasa nada, pero simplemente tienes que saber que ahora desde dentro solo podrás acceder a la nueva que has creado dentro y la de fuera no la vas a poder modificar.
+      // Si creas una variable dentro de un bloque que se llama igual que una de fuera,
+      // no pasa nada, pero simplemente tienes que saber que ahora desde dentro solo podrás 
+      // acceder a la nueva que has creado dentro y la de fuera no la vas a poder modificar.
       let contador = 1
       contador += 1
       console.log(contador)
@@ -161,10 +163,10 @@ const nombre = 'Ivan'
 
 //**************************** */
 
-
+// Muchas veces acompaña al If---> ELSE
 
 //* ELSE IF... -->  EN CAMBIO, SI SE CUMPLE ESTO....HAZ ESTO 
-//! Cuando ENTRA en un if o en un else if (cuando se cumple uno), el resto se los salta.
+//! Cuando un en if se cumple o en un else if (cuando se cumple uno), el resto se los salta.
 
 
 if (nombre === 'Ivan') {
