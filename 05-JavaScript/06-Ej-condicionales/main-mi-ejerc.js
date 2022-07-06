@@ -3,7 +3,7 @@ const numero = parseInt(prompt ('Ingresa un numero entero'))
 const valor = parseInt(prompt ('Ingresa un valor'))
 const edad = parseInt(prompt ('¿Que edad tienes?'))
 
-const mes = parseInt(prompt ('Dime el mes'))
+
 
 
  if (nota > 5) {  
@@ -55,12 +55,13 @@ const mes = parseInt(prompt ('Dime el mes'))
   }else  {
   console.log('Pagan 7€')
   }
-
+  
+  
   const dia = prompt ('¿Que dia de la semana es?')
-
+  
   if (dia !== null) {
     if(dia.trim() !== '' && isNaN(dia)) {
-      switch (dia) {
+      switch (dia.toLowerCase()) {
         case 'lunes':{
           console.log('Hoy hay crema de verduras')
           break
@@ -69,54 +70,113 @@ const mes = parseInt(prompt ('Dime el mes'))
           console.log('Hoy hay lentejas')
           break
         }
-        case 'miercoles':{
-          console.log('Hoy hay pescado')
-          break
-        }
-        case 'jueves':{
-          console.log('Hoy hay carne')
-          break
-        }
-        case 'viernes':{
-          console.log('Hoy hay pasta')
-          break
-        }
-        case 'sabado':{
-          console.log('Hoy hay pollo asado')
-          break
-        }
-        case 'domingo':{
-          console.log('Hoy hay paella')
-          break
-        }
-      } 
-    } else{
-      console.error('No es un valor correcto')
+        //ACENTOS
+        case 'miercoles':
+          case 'miércoles':{
+            console.log('Hoy hay pescado')
+            break
+          }
+          case 'jueves':{
+            console.log('Hoy hay carne')
+            break
+          }
+          case 'viernes':{
+            console.log('Hoy hay pasta')
+            break
+          }
+          //ACENTOS
+          case 'sabado':
+            case 'sábado':{
+              console.log('Hoy hay pollo asado')
+              break
+            }
+            case 'domingo':{
+              console.log('Hoy hay paella')
+              break
+            }
+            default:{
+              console.error('No es un dia de la semana correcto')
+            }
+          } 
+        } else{
+          console.error('No es un valor correcto')
     }
   }else {
     console.log('Adiós')
   }
   
   
+  const mes = parseInt(prompt ('Dime el mes'))
+  const mesMenorQue7YEsImpar = (mes <= 7 && mes % 2 === 1)
+  const mesMayorQue7YEsPar = (mes >7 && mes % 2 === 0)
+  if (mes !== null){
+    if(mes.trim() !== '' && !isNaN(mes)){
+
+      if (mes === 2 ){
+       console.log('28 dias tiene el mes')
+      }else if (mes > 12 || mes < 1 ){
+       console.log('El mes elegido es incorrecto')   
+      } else if ((mesMenorQue7YEsImpar)||(mesMayorQue7YEsPar)) {
+       console.log('31 dias tiene el mes')
+      } 
+      else {
+       console.log('30 dias tiene el mes')
+      }
+
+    }else {
+      console.error('No es un valor correcto');
+    }
+
+  }else {
+      console.log('¡Adiós!')
+  }
+
+  let horas = Number(prompt('Dime las horas:'))
+  let minutos = Number(prompt('Dime los minutos:'))
+  let segundos = Number(prompt('Dime los segundos:'))
+  
+  if (horas >= 0 && horas <= 23 && minutos >= 0 && minutos <= 59 && segundos >= 0 && segundos <= 59) {
+  
+    // Sumar un segundo a los segundos
+    segundos++
+  
+    // Si los segundos son 60
+    if (segundos === 60) {
+      // pasar los segundos a 0
+      segundos = 0
+      // sumar un minuto
+      minutos++
+    }
+  
+    // Si los minutos ahora son 60
+    if(minutos === 60) {
+      // pasar los minutos a 0
+      minutos = 0
+      // sumar una hora
+      horas++    
+    }
+    
+    // si las horas ahora son 24
+    if (horas === 24) {
+      // pasar las horas a 0 
+      horas = 0
+    }
+  
+    console.log(`La NUEVA HORA es: ${horas}:${minutos}:${segundos}`)
+  
+  
+  
+  
+  
+  }else {
+    console.error('No es una hora correcta.');
+  }
   
 
 
-
-
-
-
-
-   if (mes === 2 ){
-    console.log('28 dias tiene el mes')
-   }else if (mes > 12 || mes < 1 ){
-    console.log('El mes elegido es incorrecto')   
-   } else if ((mes <= 7 && mes % 2 === 1)||(mes >7 && mes % 2 === 0)) {
-    console.log('31 dias tiene el mes')
-   } 
-   else {
-    console.log('30 dias tiene el mes')
-   }
   
+
+
     
   
    

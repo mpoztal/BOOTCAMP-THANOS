@@ -16,15 +16,15 @@ console.log(nombre2)
 const frutas = ['🍎', '🍌']  // 0x789
 
 const otrasFrutas = frutas // 0x789 //!mal!!
-
+//Añado en posicion [2] unas uvas
 otrasFrutas[2] = '🍇' // 0x789
 
 console.log(frutas)
 console.log(otrasFrutas) 
 
-//* La manera más moderna de duplicar un array es utilizando el spread operator
+//* La manera más moderna de DUPLICAR UN ARRAY es utilizando el spread operator(...)3 puntos
 
-const misFrutas = [...frutas] // 0x378
+const misFrutas = [...frutas] // (se extiende frutas dentro del nuevo array[] que he creado)
 
 misFrutas[3] = '🍋'
 // Con el spread operator
@@ -38,7 +38,7 @@ console.log(misFrutas)
 //* Son bloques de código reutilizables
 
 // Crear la función
-function saludo () {  // 0x21654
+function saludo () {  // 0x21654 (es una referencia)
   console.log('¡Hola!')
 }
 
@@ -50,9 +50,9 @@ saludo()
 
 //* particularmente si usamos la palabra function, podemos invocar a la función antes incluso de crearla
 
-despedida() 
+despedida() //primero se invoca
 
-function despedida () {
+function despedida () {      //segundo se crea la función
   console.log('¡Adiós!')
 }
 
@@ -63,7 +63,7 @@ function despedida () {
 
 
 
-//* Para ñadirle dinamismo podemos pasarle parámetros
+//* Para añadirle dinamismo podemos pasarle parámetros y se pasan dentro de los parentesis()
 // Primero pensemos en que somos los creadores de la función y que "obligamos" al que la use a añadirnos un nombre
 function saludoPersonalizado (nombre) {
   console.log(`¡Hola, ${nombre}!`)
@@ -121,4 +121,4 @@ function sumar (num1, num2) {
   console.log(num1 + num2)
 }
 
-sumar(5, 7)
+sumar(5,7)

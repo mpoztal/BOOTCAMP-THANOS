@@ -22,8 +22,8 @@ const askUserForToDoId = (message) => {
   // Revisar si el ID es un número
   let id = prompt(message)
   
-  if (id === null || id.trim() === '' || isNaN(id)){
-    console.error('Tienes que poner un número')
+  if (id === null || id.trim() === '' || isNaN(id)){    
+    console.error('Tienes que poner un número')          //Esta estructura es muy típica, el no usar else y poner un return
     return
   }
 
@@ -60,12 +60,12 @@ const readToDos = () => {
   console.clear()
   console.log('ESTAS SON TUS TAREAS')
   for (let toDo of allToDos) {
-    console.log(`${toDo.isCompleted ? '✅' : '❌'}  ${toDo.id}: ${toDo.task}`)
+    console.log(`${toDo.isCompleted ? '✅' : '❌'}  ${toDo.id}: ${toDo.task}`) // Aplicamos un ternario
   }
 }
 
 const updateToDo = () => {
-  // Mostrar todas las tareas para que el usuario elija cual quiere actualizar
+  // Mostrar todas las tareas para que el usuario elija cual quiere actualizar llamando a ésta función.
   readToDos()
 
   const updateId = askUserForToDoId('Dime el ID de la tarea que quieres actualizar')

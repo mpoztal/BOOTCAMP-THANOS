@@ -216,3 +216,12 @@ while (!hasGanado && intentos !== 1 ) {
 if (!hasGanado) {
   console.log('Ohhhhh, has perdido...loser 😭')
 }
+
+
+
+
+
+
+
+
+

@@ -35,7 +35,7 @@ const frutas = ['🍎', '🍋', '🍇']
 console.log(frutas[0])
 
 const platano = {   //  0x9998  -->  {}
-  color: 'amarillo',
+  color: 'amarillo',    //  color seria variable y amarillo seria el valor
   procedencia: 'Islas Canarias',
   precio: 2,
   'tiene motitas': true,
@@ -64,7 +64,8 @@ console.log(tienda1, tienda2)
 
 //* Otra manera de acceder a las propiedades de un objeto
 // se puede llamar a una propiedad de un objeto también usando los corchetes. De hecho, puedes poner espacios en los nombres de las propiedades usando strings, y la única forma de acceder a ellas es usando los corchetes
-
+// con el punto . accademos al objeto y con los corchetes al array
+//Ejem.console.log(platano.procedencia) de igual forma llamamos al array
 const dato = 'color'
 console.log(frutas['0']) // '🍎'
 
@@ -116,7 +117,7 @@ for(let [index, valor] of numeros.entries()) {
 
 //******************************** */
 
-
+// Día 21 parte 1ª
 
 //? Algo muy muy típico que nos encontramos tanto en bases de datos como en API es tener UN ARRAY CON MUCHOS OBJETOS
 

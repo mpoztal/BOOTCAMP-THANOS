@@ -1,10 +1,10 @@
 const texto = 'Hola. Qué pasa, ¿tronco?'
 
-//* Todos los String tienen una propiedad llamada "length" que me da la información de la longitud que tiene el string
+//* Todos los String tienen una sóla propiedad llamada "length" que me da la información de la longitud que tiene el string
 
 console.log(texto.length) // 18
 
-//! Casi todos los métodos NUNCA CAMBIAN EL VALOR ORIGINAL, simplemente devuelven un nuevo valor que podemos utilizar directamente o guardarlo en una variable
+//! Casi todas las funciones NUNCA CAMBIAN EL VALOR ORIGINAL, simplemente devuelven un nuevo valor que podemos utilizar directamente o guardarlo en una variable
 
 
 //* trim() --> para eliminar espacios delante y detrás

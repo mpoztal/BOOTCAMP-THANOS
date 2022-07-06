@@ -14,7 +14,7 @@ console.log('Ríz cuadrada de 144 -->', Math.sqrt(144))
 // Potencia de un número elevado a otro
 console.log('3 elevado al cuadrado -->', Math.pow(3, 2))
 
-// Redondeo común de un número al entero más cercano
+// Redondeo común de un número al entero más cercano (el 1,2,3,4--->van hacia la baja)
 console.log('Round de 5.7 -->', Math.round(5.7))
 console.log('Round de 5.3 -->', Math.round(5.3))
 console.log('Round de 5.5 -->', Math.round(5.5))
@@ -23,7 +23,7 @@ console.log('Round de 5.5 -->', Math.round(5.5))
 console.log('Ceil de 5.1 -->', Math.ceil(5.1))
 console.log('Ceil de 5.9 -->', Math.ceil(5.9))
 
-// Redondeo siempre a la baja
+// Redondeo siempre a la baja 
 console.log('Floor de 5.1 -->', Math.floor(5.1))
 console.log('Floor de 5.9 -->', Math.floor(5.9))
 

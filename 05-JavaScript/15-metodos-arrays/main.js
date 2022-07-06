@@ -47,8 +47,8 @@ console.log('Frutas -->', frutas)
 
 //* indexOf --> devuelve el índice de la posición donde esté lo que le pasemos como parámetro. si no lo encuentra devolverá -1
 console.log(numeros)
-console.log('numeros.indexOf(13) -->', numeros.indexOf(13)) // 1
-console.log('numeros.indexOf(14) -->', numeros.indexOf(14)) //-1
+console.log('numeros.indexOf(13) -->', numeros.indexOf(13)) // 1 devuelve posicion 1 pos consola
+console.log('numeros.indexOf(14) -->', numeros.indexOf(14)) //-1 xq no existe
 
 
 //* includes --> devuelve "true" o "false" si lo que has pasado como parámetro se encuentra en el array
@@ -73,7 +73,7 @@ console.log(numeros)
 //* join() --> lo inverso del split() de los strings. Retorna un string con el separador que le indiquemos
 
 const frase = 'Me encanta estudiar JavaScript'
-const fraseArray = frase.split('a')
+const fraseArray = frase.split('a') //Elimina la 'a'
 
 // si al join no le decimos nada me crea el string separado por comas
 console.log(fraseArray.join())
@@ -123,7 +123,7 @@ console.log(frutas)
 frutas.splice(frutas.indexOf('🐟'), 1, '🦐' )
 console.log(frutas)
 
-// Ejemplo
+// Ejemplo (min 1:30) dia 19 2ºparte
 // Borra del array TODOS LOS PESCADOS y lo sustituyes por una gamba
 
 const arrayDePescados = ['🍆', '🐟', '👞', '⚡', '🐟', '🍭', '🍊', '🐟'];

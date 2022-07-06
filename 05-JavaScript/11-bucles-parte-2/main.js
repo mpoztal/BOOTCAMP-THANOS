@@ -43,7 +43,9 @@ do {
   // empieza desde el principio siempre
   // siempre termina al final del elemento
   // siempre va de uno en uno
-//! La diferencia es que la variable que pongamos en el for...in SIEMPRE VA A CONVERTIRSE EN EL ÍNDICE DE LA VUELTA EN LA QUE ESTÉS
+//! La diferencia es que la variable que pongamos en el for...in SIEMPRE VA A CONVERTIRSE EN EL 
+//ÍNDICE DE LA VUELTA EN LA QUE ESTÉS   En el for...of (se pinta la fruta) y En el for..in (se pinta
+//la posición que ocupa, es decir indice ó i ó index 0,1,2,3..)
 
 const frutas = ['🍐', '🍎', '🍌', '🍇', '🍑', '🍒']
 
@@ -56,3 +58,4 @@ for (let fruta of frutas) {
 for (let i in frutas) {
   console.log(i,  frutas[i])
 }
+
