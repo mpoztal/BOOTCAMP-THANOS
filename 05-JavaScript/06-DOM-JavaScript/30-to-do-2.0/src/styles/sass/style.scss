@@ -1,0 +1,47 @@
+
+$primary: #2a9d8f;
+$secondary: #264653;
+$warning: #e9c46a;
+$danger: #e76f51;
+
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+
+body {
+  background-color: $secondary;
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");  
+}
+
+.task .delete-btn {
+  cursor: pointer;
+}
+
+.input-error , .input-error:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 1, 26, 0.441);
+}
+
+.error-alert {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: errorAppear 5s ease; 
+}
+
+
+@keyframes errorAppear {
+  from {
+    left: -100%;
+  }
+  20% {
+    left: 50%;
+  }
+  80% {
+    left: 50%;
+  }
+  to {
+    left: -100%;
+  }
+}

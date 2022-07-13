@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="icon" href="https://ivan-luengo.com/wp-content/uploads/2020/03/cropped-favicon-ivan_luengo-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Calculadora 2.0</title>
+</head>
+<body>
+  <div class="container d-flex flex-column">
+
+    <h1 class="text-center my-4">Calculadora 2.0</h1>
+    <!-- Para ver la versión conformulario o sin hay que comentar una línea y descomentar la otra -->
+    <div class="main-form">
+    <!-- <form class="main-form"> -->
+      <div class="row">
+        <div class="col-6">
+          <input
+            class="form-control border border-2 border-dark" 
+            type="number" 
+            placeholder="Primer número..."
+            name="firstNumber"            
+          >
+          <!-- <small class="error text-danger d-none">Tienes que poner un número</small> -->
+        </div>
+        <div class="col-6">
+          <input 
+            class="form-control border border-2 border-dark"
+            type="number" 
+            placeholder="Segundo número..."
+            name="secondNumber"
+          >
+          <!-- <small class="error text-danger d-none">Tienes que poner un número</small> -->
+        </div>
+      </div>
+
+      <div class="operation-buttons row mt-4">
+        <div class="col-3">
+          <button class="add btn btn-primary w-100" data-operation="+">Sumar</button>
+        </div>
+        <div class="col-3">
+          <button class="subtract btn btn-secondary w-100" data-operation="-">Restar</button>
+        </div>
+        <div class="col-3">
+          <button class="multiply btn btn-warning w-100" data-operation="*">Multiplicar</button>
+        </div>
+        <div class="col-3">
+          <button class="divide btn btn-danger w-100" data-operation="/">Dividir</button>
+        </div>
+      </div>
+
+    </div>
+    <!-- </form> -->
+
+    <div class="border border-2 border-dark align-self-center p-2 mt-4 rounded text-center">
+      <h2>Resultado</h2>
+      <h3 class="output">0</h3>
+    </div>
+
+  </div>
+  
+  
+  <!-- <script src="mainSinForm.js"></script> -->
+  <!-- <script src="mainConForm.js"></script> -->
+  <script src="mainEventDelegation.js"></script>
+</body>
+</html>

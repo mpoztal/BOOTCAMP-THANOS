@@ -1,0 +1,15 @@
+.outline {
+  outline: 2px solid black;
+}
+
+.saltar {
+  animation: saltar 1s 4 ease-out;
+}
+
+
+
+@keyframes saltar{
+  to {
+    transform: translateY(-10px)
+  }
+}

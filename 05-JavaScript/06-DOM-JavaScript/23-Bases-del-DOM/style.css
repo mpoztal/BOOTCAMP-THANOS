@@ -1,0 +1,21 @@
+#main-title {
+  color: crimson;
+}
+
+#hola-que-tal {
+  color: lightseagreen;
+}
+
+.color-gold {
+  color: gold;
+}
+.color-green {
+  color: lightseagreen;
+}
+
+.caja {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 2px solid black;
+}

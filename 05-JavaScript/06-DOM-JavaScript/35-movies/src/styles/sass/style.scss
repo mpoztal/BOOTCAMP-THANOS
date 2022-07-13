@@ -1,0 +1,70 @@
+@use 'fonts';
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+$font-family-sans-serif: 'Comfortaa', sans-serif;
+$headings-font-weight: 700;
+
+$primary: #619b8a;
+$secondary: #233d4d;
+$warning: #fcca46;
+$success: #a1c181;
+$info: #fe7f2d;
+$danger: #fb6376;
+$light: #fafafa;
+$semilight: #d7d7d7;
+$dark: #232323;
+$adventures: #ff99c8;
+$terror: #fcf6bd;
+$action: #d0f4de;
+$drama: #e4c1f9;
+$fantasy: #a9def9;
+$comedy: #fec89a;
+
+
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "semilight": $semilight,
+  "dark":       $dark,
+  "adventures": $adventures,
+  "terror": $terror,
+  "action": $action,
+  "drama": $drama,
+  "fantasy": $fantasy,
+  "comedy": $comedy
+);
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.icon {
+  cursor: pointer;
+}
+
+.empty-input-error {
+  animation: errorInOut 5s forwards ease;
+}
+
+.is-invalid::placeholder {
+  color: $danger;
+}
+
+@keyframes errorInOut {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 50%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: -100%;
+  }
+}
