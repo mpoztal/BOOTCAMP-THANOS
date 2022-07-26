@@ -31,7 +31,7 @@ button.addEventListener('click', () => {irstElementChild.
   padre.querySelector('p').style.backgroundColor = 'pink'
 
   button.parentElement.style.border = '2px solid lightseagreen'
-
+ // Eliminar remove
   button.remove()
 
 })

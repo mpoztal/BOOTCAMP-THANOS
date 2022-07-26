@@ -2,13 +2,15 @@
 // Como definición una HOF es una función que recibe como parámetro otra función (también puede retornar una función)
 
 
-//* La siguiente función SOLO IMPRIME HOLA
+//* La siguiente función SOLO IMPRIME HOLA (está en global)
 const saludar = () => {
   console.log('hola')
 }
 
 
 //* La siguiente función SOLO REPITE CÓDIGO 10 VECES. Lo que sea que vaya a repetir esas 10 veces se lo pasamos como parámetro
+//* Ésta primera parte es la parte de creacion (de la funcion de hastadiez)
+
 const hastaDiez = (fn) => {
 
   for (let i = 1; i <= 10; i++) {

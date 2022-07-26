@@ -104,7 +104,9 @@ numeros.forEach( (num) => console.log(num * 2) )
     }
   })
 
-  //* El método que FILTRA CON UNA CONDICIÓN EN EL RETURN se llama --> .filter()
+  //* El método que FILTRA CON UNA CONDICIÓN EN EL RETURN se llama --> .filter() 
+      te devuelve un nevo array según una condición.  
+
   //! si ningún elemento cumple la condición devolverá un aray vacío
     // versión corta
   const filtrarPorA = nombres.filter( (nombre) => {
@@ -117,7 +119,7 @@ numeros.forEach( (num) => console.log(num * 2) )
 
   console.log(filtrarPorD)
 
-  */
+  */ // (si ponemos las {} se necesita el return, xq si no, no funciona.)
 
   
   //*************************************************/
@@ -180,3 +182,5 @@ numeros.forEach( (num) => console.log(num * 2) )
   console.log(frutas.every((fruta) => fruta === '🍐')) // false
 
   console.log(frutas.every((fruta) => typeof fruta === 'string')) // true
+
+ 

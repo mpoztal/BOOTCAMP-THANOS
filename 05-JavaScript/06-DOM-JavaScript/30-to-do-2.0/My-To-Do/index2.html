@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon-32x32.png">
+    
+    <link rel="stylesheet" href="./src/styles/css/style.css">
+    <title>Mi lista de Tareas 2.0</title>
+</head>
+<body>
+  <div class="container">
+   <h1 class="text-warning my-4 text-center">Mi lista de Tareas 2.0</h1>
+
+   <form class="main-form d-flex flex-column align-items-center gap-4">
+    <input class="form-control  w-50" type="text" placeholder="Tarea..." name="taskInput">
+    <div class="form-check">
+      <input class="form-check-input" id="completed" type="checkbox" name="completedInput">
+      <label class="form-check-label text-warning" for="completed">¿Completada?</label>
+    </div>
+    <button class="btn btn-danger">Añadir</button>
+
+   </form>
+
+   <section class="tasks-section mt-5 border border-2 border-light rounded p-3 w-75 mx-auto text-warning">
+    <h2 class="text-white text-center">Mis tareas:</h2>
+<!-- comento los h3 para que no me aparezcan de primeras las tareas -->
+      <!-- <h3 class=" task d-flex gap-2 fs-5 mt-3">Pasear a las niñas - <span>👌</span> <span class="delete-btn ms-auto">❌</span></h3> -->
+      <!-- <h3 class=" task d-flex gap-2 fs-5 mt-3">Estudiar - <span>👎</span> <span class="delete-btn ms-auto">❌</span></h3> -->
+      <!-- <h3 class=" task d-flex gap-2 fs-5 mt-3">Cocinar - <span>👎</span> <span class="delete-btn ms-auto">❌</span></h3> -->
+      
+ 
+
+   </section>
+   
+
+
+  </div>
+   
+ <script src="./src/main.js"></script>
+</body>
+</html>

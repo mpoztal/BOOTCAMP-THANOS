@@ -4,7 +4,7 @@
 
 Úsalo como un `for...of`. Simplemente recorre el array y haz lo que quieras en cada vuelta.
 
-```javascript
+```javascript// éste es el código
 frutas.forEach( (valor, indice) => {
   console.log(valor, indice)
 } )

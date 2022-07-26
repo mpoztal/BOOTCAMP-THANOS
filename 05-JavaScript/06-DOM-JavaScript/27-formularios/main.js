@@ -1,6 +1,6 @@
 //? Formularios
 
-//* Primero caxamos los elementos
+//* Primero cazamos los elementos
 const form = document.querySelector('.main-form')
 
 //* En cualquier momento, si tengo un formulario cazado, puedo llamar a alguno de sus métodos
@@ -33,7 +33,7 @@ const languageSelect = document.querySelector('#language')
 
 //* EVENTOS TÍPICOS EN UN FORMULARIO
 
-//! Para un input de tipo texto, yo escogería el keypress si queremos jugar con QUÉ TECLA HA APRETADO
+//! Para un input de tipo texto, ¡YO ESCOGERÍA EL keypress! si queremos jugar con QUÉ TECLA HA APRETADO
 
 
 inputName.addEventListener('keypress', (e) => {

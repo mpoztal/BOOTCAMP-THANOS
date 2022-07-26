@@ -47,7 +47,7 @@ document.body.addEventListener('click', (evento) => {
   }
 
 })
-
+// Con éste ejemplo sabemos q con la tecla 'A' se ejecuta la funcion
 const apretarTecla = (evento) => {
   console.log(evento)
 
@@ -59,14 +59,15 @@ const apretarTecla = (evento) => {
 
 }
 
-document.body.addEventListener('keypress', (evento) => apretarTecla(evento))
+document.body.addEventListener('keypress', (evento) => apretarTecla(evento)) //Muestra info de la tecla presionada
 
 
 //******************************************/
 
 //* TENEMOS UN PAR DE MANERAS MÁS DE CREAR ESCUCHADORES
 
-// 1.- Añadiendo dentro de la etiqueta HTML un atributo con el mismo nombre que el evento que quieres escuchar pero con "on" delante. Ej: onclick="clickEnLinea()"
+// 1.- (YA NO SE HACE EN HTML) Añadiendo dentro de la etiqueta HTML un atributo con el mismo nombre que el evento que quieres escuchar pero con "on" delante. 
+//    Ej: onclick="clickEnLinea()" Se pondria en el doc. html (ver el documento) SE DEJO DE USAR EL PONER EVENTOS EN HTML
 
 const clickEnLinea = () => {
   console.log('Has hecho clic directamente desde HTML')
@@ -83,7 +84,8 @@ const clickDesdePropiedad = (evt) => {
   console.log('Has hecho clic desde la propiedad "oncontextmenu"')
   
 }
-
+// FORMA MAS CORTA PARA NO HACER EL (addEventListener) la pega de éste es q solo lo podemos hacer 
+// una sola vez xq en el ejm. de abajo lo SOBRE-ESCRIBE
 miFoto.onclick = (evt) => console.log('has hecho click', evt)
 miFoto.oncontextmenu = (evt) => clickDesdePropiedad(evt)
 
@@ -99,10 +101,10 @@ console.dir(miFoto)
 
 // podemos prevenir ese comportamiento utilizando el "event object" y su método "event.preventDefault()"
 
-// const formulario = document.forms[0]
+// const formulario = document.forms[0]   FORMA DE CAZAR UN FORMULARIO (ARRAY)
 const formulario = document.querySelector('#form')
 
-formulario.addEventListener('submit', (evt) => {
+formulario.addEventListener('submit', (evt) => { //FUNCION PARA ESCUCHAR CADA VEZ Q SE ENVÍE UN FORMULARIO
   evt.preventDefault()
   console.log('formulario enviado', evt)
 })

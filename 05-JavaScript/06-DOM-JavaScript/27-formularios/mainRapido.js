@@ -1,6 +1,6 @@
 //? Formularios
 
-//* Primero caxamos los elementos
+//* Primero cazamos los elementos
 const form = document.querySelector('.main-form')
 
 const allRadios = document.querySelectorAll('[name="gender"]')
@@ -29,7 +29,7 @@ const handleSubmit = (e) => {
   const genderValue = form.gender.value
   
 
-  //* SELECT --> Aquí solo tenemos que cazar el select y preguntar por su value
+  //* SELECT (ej. lenguaje) --> Aquí solo tenemos que cazar el select y preguntar por su value
   const languageValue = form.language.value
 
 
