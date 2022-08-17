@@ -74,3 +74,5 @@ class Crono {
 }
 
 export default Crono
+// Este objeto se encarga de todo.A traves de las instancias éste archivo
+//puede ser utilizado por cualquiera.

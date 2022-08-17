@@ -34,7 +34,7 @@ const createBootstrapAlert = (message = 'Error', color = 'danger') => {
 
   // alert.addEventListener('animationend', () => alert.remove())
 
-  // Esto es del futuro
+  // Esto es del futuro para hacerla el dia q queramos con más experiencia
   setTimeout(() => { alert.remove() }, 6000)
 }
 

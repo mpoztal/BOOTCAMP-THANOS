@@ -56,7 +56,8 @@ const displayMovies = (array = allMovies) => {
 }
 
 const checkEmptyInput = (input) => {
-  // revisar que no haya dejado ningún campo vacío
+  // revisar que no haya dejado ningún campo vacío hacemos una función
+  //('is-invalid')ésta es una clase de bootstrap.
 
   if (input.value === ''){
     input.classList.add('is-invalid')

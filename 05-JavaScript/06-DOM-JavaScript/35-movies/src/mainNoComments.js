@@ -200,7 +200,8 @@ const handleSubmit = (event) => {
   const [title, genre, isSeen] = formValues
  
   const newMovie = { id: nanoid(5), title, genre, isSeen }
-
+// Con ésta forma,modif.array original sumandole a éste los cambios. Dando lugar 
+// a unos nevos arrays.Por cada nuevo dato estaremos creando array newMovie
   allMovies = [...allMovies, newMovie] 
   
   setMoviesToLocalStorage()

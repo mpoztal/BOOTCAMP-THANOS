@@ -4,7 +4,7 @@ import isTheInputEmpty from '../helpers/isTheInputEmpty.js'
 // import createBootstrapModal from '../helpers/createBootstrapModal.js'
 import ToDo from './ToDo'
 
-class ToDoApp {
+class ToDoApp { // 1º CAZAMOS TODOS LOS ELEMENTOS
   constructor () {
     this.allToDos = []
     this.inputToDo = document.querySelector('.inputTask')
@@ -15,10 +15,10 @@ class ToDoApp {
     this.filterCompleted = document.querySelector('.filterCompleted')
     this.filterClear = document.querySelector('.filterClear')
 
-    //* "Bindear" un método
+    //* "Bindear" un método para unir dos metodos
     this.updateToDo = this.updateToDo.bind(this)
 
-    this.inputToDo.onkeyup = (e) => this.handleSubmitToDo(e)
+    this.inputToDo.onkeyup = (e) => this.handleSubmitToDo(e)// 2º CREAR UN METODO PARA VER Q HA ESCRITO EL USUARIO
     this.filterAll.onclick = () => this.printToDos()
     // this.filterActive.onclick = () => this.filterActiveToDos()
     // this.filterCompleted.onclick = () => this.filterCompletedToDos()
@@ -83,7 +83,7 @@ class ToDoApp {
     localStorage.setItem('allToDos', JSON.stringify(this.allToDos))
   }
 
-  handleSubmitToDo (e) {
+  handleSubmitToDo (e) { // 3º DESARROLLAMOS EL HANDLESUBMITTODO
     if (e.key !== 'Enter') return
 
     if (isTheInputEmpty(this.inputToDo)) {

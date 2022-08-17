@@ -1,15 +1,22 @@
 {
-  "name": "35-mi-movies",
+  "name": "exam-to-do",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "sass": "^1.54.3"
+  },
+  "devDependencies": {
+    "vite": "^3.0.0"
   }
 }

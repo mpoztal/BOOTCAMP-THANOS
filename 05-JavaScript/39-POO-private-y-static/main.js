@@ -8,7 +8,7 @@ class SeatCar {
     // el guión bajo era una convención para decirle a otro programador que no se mutaran esas propiedades directamente
     this._model = model
 
-    // con la almohadilla hacemos una propiedad o método privado, NO SE PUEDE MUTAR DESDE FUERA
+    // con la almohadilla hacemos una propiedad o método PRIVADO, NO SE PUEDE MUTAR DESDE FUERA
     this.#brand = 'Seat' 
     
     

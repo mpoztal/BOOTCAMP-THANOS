@@ -4,32 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./src/assets/favicon-32x32.png">  
-    <link rel="stylesheet" href="./dist/styles/css/style.css">
+    <link rel="icon" href="./src/assets/img/favicon-32x32.png">  
+
     <title>Practicas de examen->To-Do's</title>
 </head>
-<main class="container">
 
-    <form class="add-activity-form">
-        <div class="">
+<main class="container border border-5 border-primary rounded Regular shadow p-4 w-80 
+mx-auto">
+<h1 class="title text-center text-secondary">Rutinas de entrenamientos</h1>
+
+    <form class="main-form d-flex flex-column align-items-center gap-5"> 
+        
             <input
-            class="form-control"
+            class="form-control w-50 mt-4"
             type="text"
-            placeholder="Reto conseguido..."
-            name="activity-name"
+            placeholder="Introducir reto..."
+            name="taskInput"
             >
-        </div>
-        <div class="">
+        
+        <div class="form-intensity d-flex">
             <select class="form-select" name="intensity">
                 <option value="Súper">Súper</option>
                 <option value="Medio">Medio</option>
                 <option value="Bajo">Bajo</option>
             
             </select>
+            <label class="form-select-label-intensity text-white p-3">Intensidad</label>
         </div>
-        <button class="btn btn-primary" name="activity-btn">Guardar</button>
+
+        <div class="form-frequency d-flex">
+            <select class="form-select" name="frequency">
+                <option value="Diaria">Diaria</option>
+                <option value="Semanal">Semanal</option>
+                <option value="Mensual">Mensual</option>
+            
+            </select>
+            <label class="form-select-label-frequency text-white p-3">Frecuencia</label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" id="completed" type="checkbox">
+            <label class="form-check-label text-white" for="completed">Reto conseguido</label>
+        </div>
+
+        <button class="btn btn-warning" name="activity-btn">Guardar</button>
          
     </form>
+    <section class="tasks-section mt-5 border border-2 border-primary rounded p-3 w-75 
+    mx-auto text-primary " >
+        <h2 class=" text-white text-center">Mis retos</h2>
+       
+            <h3 class="task d-flex fs-5 mt-3 gap-4">Fire hydrant <i class="bi bi-hand-thumbs-down-fill"></i>
+            <i class="bi bi-trash text-warning ms-auto"></i></h3> 
+            
+            <h3 class="task d-flex fs-5 mt-3 gap-4">Run (5.000 mtr)<i class="bi bi-hand-thumbs-up-fill"></i>
+                <i class="bi bi-trash text-warning ms-auto"></i></h3>
+                
+                <h3 class="task d-flex fs-5 mt-3 gap-4">Burpee <i class="bi bi-hand-thumbs-down-fill"></i>
+                    <i class="bi bi-trash text-warning ms-auto"></i></h3>  
+
+    </section>
 </main>
 
 
@@ -50,6 +84,6 @@
 <body>
 
    
-   <script src="./src/main.js"></script> 
+   <script src="./src/main.js" type="module"></script> 
 </body>
 </html>

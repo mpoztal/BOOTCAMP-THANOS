@@ -115,10 +115,10 @@ class CocheSeat {
   constructor(modelo, ruedas) {
     this.marca = 'Seat'
     this.arrancado = false
-    this.ruedas = ruedas ?? 4  // en este caso también valoraríamos el 0 como respuesta válida
+    this.ruedas = ruedas ?? 4  // (CONSTRUCTOR) en este caso también valoraríamos el 0 como respuesta válida
     this.modelo = modelo || 'Ibiza'
 
-    // Podemos tranquilamente llamar a cualquier método dentro del constructor para que se ejecute nada más instanciar un objeto
+    // (METODOS) Podemos tranquilamente llamar a cualquier método dentro del constructor para que se ejecute nada más instanciar un objeto
     this.infoCoche()
   }
 
