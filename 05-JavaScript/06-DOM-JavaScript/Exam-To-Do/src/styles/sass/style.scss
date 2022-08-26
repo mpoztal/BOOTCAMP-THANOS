@@ -2,7 +2,8 @@ $primary: #1d3557;
 $secondary: #004980;
 $warning:#9b2226;
 $danger:#ee6c4d;
-
+$yellow:#f6d324;
+$green:#06f88f;
 
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
@@ -30,5 +31,25 @@ body {
     background-color: $secondary;
     background-image: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
     font-family: Spectral;
+}
+
+.logo {
+    width: 240px;
+    height: 170px;
+}
+
+.trash {
+    cursor: pointer;
+} 
+
+.empty-input-error  {
+    
+    margin-top: 50px;
+}
+.bg-yellow {
+    background-color: $yellow;
+}
+.bg-green {
+    background-color: $green;
 }
 

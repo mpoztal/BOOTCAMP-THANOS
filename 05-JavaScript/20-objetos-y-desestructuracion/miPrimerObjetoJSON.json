@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "name": "John",
+  "age": 60,
+  "isMarried": true,
+  "children": [
+    {
+      "id": 2,
+      "name": "Jane",
+      "age": 25
+    },
+    {
+      "id": 3,
+      "name": "Jack",
+      "age": 30
+    }
+  ]
+}

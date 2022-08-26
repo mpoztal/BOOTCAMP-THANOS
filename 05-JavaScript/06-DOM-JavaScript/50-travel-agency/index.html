@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="icon" href="./src/assets/img/favicon.svg">  
+  <title>Travel Agency App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-teal-50">
+  <header class="bg-emerald-200 py-5">
+    <h1 class="container px-3 mx-auto text-3xl font-bold">Travel Agency App</h1>
+  </header>
+
+  <main class="container px-3 mx-auto">
+    <form class="mainForm mt-6 grid grid-cols-3 gap-2">
+      <input class=" border-2 border-gray-300 rounded py-1 px-3" name="city" type="text" placeholder="Ciudad...">
+      <input class="border-2 border-gray-300 rounded py-1 px-3" name="country" type="text" placeholder="País...">
+      <button class="bg-violet-300 hover:bg-violet-200 py-1 px-3 rounded row-span-2" name="btnAddEdit">Añadir</button>
+      <input class="border-2 border-gray-300 rounded py-1 px-3 col-span-2" name="photo" type="text" placeholder="URL de la foto...">
+    </form>
+
+    <section class="filters mt-6 bg-white shadow px-2 py-2 rounded flex"> 
+
+        <button class="notFavorite hover:bg-gray-100 border border-gray-300 p-1 rounded-l">
+          <i class="text-red-500 fa-regular fa-heart text-xl"></i>
+        </button>
+        <button class="favorite hover:bg-gray-100 border border-gray-300 p-1">
+          <i class="text-red-500 fa-solid fa-heart text-xl"></i>
+        </button>
+        <button title="Quitar filtros" class="clearFilters hover:bg-gray-100 border border-gray-300 p-1 px-3">
+          <i class="text-rose-400 fa-solid fa-xmark"></i>
+        </button>
+        <input class="searchDestination border border-gray-300 px-2 rounded-r flex-1" type="text" placeholder="Buscar Viaje...">  
+
+    </section>
+
+    <section class="destinations mt-2 mb-12 grid grid-cols-2 gap-2">
+      <!-- <article class="destination bg-white shadow rounded p-2 relative">
+        <img class="aspect-video object-cover" src="https://images.pexels.com/photos/3254729/pexels-photo-3254729.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="Madrid, España">
+
+        <i class="favoriteIcon text-red-500 fa-regular fa-heart absolute top-3 left-4 cursor-pointer text-xl hover:scale-125 transition-transform"></i>
+
+        <div class="flex items-center mt-2">
+          <h2 class="text-xl mr-3">Madrid</h2>
+          <h3 class="bg-yellow-300 px-2 rounded-full">España</h3>
+          <i class="editIcon fa-solid fa-pen-to-square text-violet-600 ml-auto mr-3 cursor-pointer hover:scale-125 transition-transform"></i>
+          <i class="deleteIcon text-red-500 cursor-pointer fa-solid fa-trash-can hover:scale-125 transition-transform"></i>
+        </div>
+      </article> -->
+      
+    </section>
+
+  </main>
+
+  
+  
+  
+  <script src="./src/main.js" type="module"></script>
+  <script src="./src/main2.js" type="module"></script>
+</body>
+</html>

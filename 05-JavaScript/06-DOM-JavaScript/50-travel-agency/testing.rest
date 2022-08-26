@@ -1,0 +1,18 @@
+GET https://api-de-travels.herokuapp.com/destinations
+
+###
+
+POST https://api-de-travels.herokuapp.com/destinations
+content-type: 'application/json; charset=utf-8'
+
+{  
+    "city": "Las Vegas",
+    "country": "USA",
+    "photo": "https://img.huffingtonpost.com/asset/5c8b6d942300003000e82b23.jpeg?ops=scalefit_720_noupscale&format=webp",
+    "favorite": true,
+    "visited": false,
+}
+
+###
+
+DELETE https://api-de-travels.herokuapp.com/destinations/15
