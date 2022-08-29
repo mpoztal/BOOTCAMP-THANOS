@@ -3,11 +3,11 @@ import { nanoid } from "nanoid"
  
 
 class Activity {
-    constructor(task, intensity, frecuncy, completed) {
+    constructor(task, intensity, frequency, completed) {
         this.id = nanoid(5)
         this.task = task
         this.intensity = intensity
-        this.frecuncy = frecuncy
+        this.frequency = frequency
         this.completed = completed
     }
 

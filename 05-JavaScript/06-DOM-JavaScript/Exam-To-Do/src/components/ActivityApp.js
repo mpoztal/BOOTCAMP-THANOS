@@ -40,7 +40,7 @@ class ActivityApp {
         console.log(this.completedActivity.checked)
 
         if (isTheInputEmpty(this.inputActivity)) {
-            const errorAlert = createBootstrapAlert('No puedes dejar el input vacío.')
+            const errorAlert = createBootstrapAlert('¡Nombre del reto está vacío!')
             return
         }
 
@@ -68,7 +68,11 @@ class ActivityApp {
                 this.createActivity(activity)
             })
         } else {
-            this.activityBox.innerHTML = 'Introduce tu primer reto'
+            this.activityBox.innerHTML = ''
+            const emptyHTML = document.createElement('h2')
+            emptyHTML.className = 'text-white text-center'
+            emptyHTML.textContent = 'Introduce tu primer reto'
+            this.activityBox.append(emptyHTML)
         }
         
     }
@@ -85,10 +89,11 @@ class ActivityApp {
             spanHTML.className = 'bg-yellow text-black'
 
         } else  spanHTML.className = 'bg-green text-black'
-       
-                       
-        
         spanHTML.textContent = activity.intensity
+        
+        const frecuencyHTML = document.createElement('span')
+        frecuencyHTML.className = 'form-frequency d-flex'
+        frecuencyHTML.textContent = activity.frequency
 
         
         const checkBtn = document.createElement('i')
@@ -96,7 +101,7 @@ class ActivityApp {
         const deleteBtn = document.createElement('i')
         deleteBtn.className = 'bi trash bi-trash text-warning ms-auto'
         deleteBtn.onclick = () => this.deleteActivity(activity.id)
-        activityHTML.append(spanHTML, checkBtn, deleteBtn)
+        activityHTML.append(spanHTML,frecuencyHTML, checkBtn, deleteBtn)
         this.activityBox.append(activityHTML)
 
     }
