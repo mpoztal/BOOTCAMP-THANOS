@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootcampThanos.DataAccess", "BootcampThanos.DataAccess\BootcampThanos.DataAccess.csproj", "{3FBDA360-40EF-464A-9836-DFDC7F7AC9F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Distributed Services", "1 - Distributed Services", "{3A60C9D9-63EC-49D3-B1AB-0E6CB929007B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{ABBF6465-48B9-429F-924B-25BFCBD1DF15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Business", "3 - Business", "{CFE9F70E-2D95-4C05-979A-CB29864DB229}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - DataAccess", "4 - DataAccess", "{06C4C1A1-5A8C-49EB-8093-C37F2145CB5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Cross-Cutting", "5 - Cross-Cutting", "{6BD89033-E469-4923-9EE7-5AD0A9FA8F3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootcampThanos.DataAccess.Contracts", "BootcampThanos.DataAccess.Contracts\BootcampThanos.DataAccess.Contracts.csproj", "{1FB647E0-6514-41D7-9440-31B4096EBE9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootcampThanos.BusinessModels", "BootcampThanos.BusinessModels\BootcampThanos.BusinessModels.csproj", "{B525455D-F6E0-46DC-942A-4BC275E199AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootcampThanos.Application", "BootcampThanos.Application\BootcampThanos.Application.csproj", "{C914B734-7213-454B-ABC1-F3142AB06638}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootcampThanos.Application.Contracts", "BootcampThanos.Application.Contracts\BootcampThanos.Application.Contracts.csproj", "{7839FD2F-9900-4B41-BA8E-290C14B7BF4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootcampThanos.CrossCutting", "BootcampThanos.CrossCutting\BootcampThanos.CrossCutting.csproj", "{D88B9670-0A9A-46CA-AC94-1CD9FE33727E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootcampThanos.API", "BootcampThanos.API\BootcampThanos.API.csproj", "{17BC4B78-CF99-4CEE-8A03-7A5BC1551811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootcampThanos.CrossCutting.Contracts", "BootcampThanos.CrossCutting.Contracts\BootcampThanos.CrossCutting.Contracts.csproj", "{DC60716C-5FA4-4916-B9C9-A20FFC32C139}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FBDA360-40EF-464A-9836-DFDC7F7AC9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBDA360-40EF-464A-9836-DFDC7F7AC9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBDA360-40EF-464A-9836-DFDC7F7AC9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBDA360-40EF-464A-9836-DFDC7F7AC9F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB647E0-6514-41D7-9440-31B4096EBE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB647E0-6514-41D7-9440-31B4096EBE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB647E0-6514-41D7-9440-31B4096EBE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB647E0-6514-41D7-9440-31B4096EBE9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B525455D-F6E0-46DC-942A-4BC275E199AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B525455D-F6E0-46DC-942A-4BC275E199AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B525455D-F6E0-46DC-942A-4BC275E199AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B525455D-F6E0-46DC-942A-4BC275E199AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C914B734-7213-454B-ABC1-F3142AB06638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C914B734-7213-454B-ABC1-F3142AB06638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C914B734-7213-454B-ABC1-F3142AB06638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C914B734-7213-454B-ABC1-F3142AB06638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7839FD2F-9900-4B41-BA8E-290C14B7BF4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7839FD2F-9900-4B41-BA8E-290C14B7BF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7839FD2F-9900-4B41-BA8E-290C14B7BF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7839FD2F-9900-4B41-BA8E-290C14B7BF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D88B9670-0A9A-46CA-AC94-1CD9FE33727E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D88B9670-0A9A-46CA-AC94-1CD9FE33727E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D88B9670-0A9A-46CA-AC94-1CD9FE33727E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D88B9670-0A9A-46CA-AC94-1CD9FE33727E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17BC4B78-CF99-4CEE-8A03-7A5BC1551811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BC4B78-CF99-4CEE-8A03-7A5BC1551811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BC4B78-CF99-4CEE-8A03-7A5BC1551811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BC4B78-CF99-4CEE-8A03-7A5BC1551811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC60716C-5FA4-4916-B9C9-A20FFC32C139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC60716C-5FA4-4916-B9C9-A20FFC32C139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC60716C-5FA4-4916-B9C9-A20FFC32C139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC60716C-5FA4-4916-B9C9-A20FFC32C139}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3FBDA360-40EF-464A-9836-DFDC7F7AC9F5} = {06C4C1A1-5A8C-49EB-8093-C37F2145CB5F}
+		{1FB647E0-6514-41D7-9440-31B4096EBE9F} = {06C4C1A1-5A8C-49EB-8093-C37F2145CB5F}
+		{B525455D-F6E0-46DC-942A-4BC275E199AC} = {CFE9F70E-2D95-4C05-979A-CB29864DB229}
+		{C914B734-7213-454B-ABC1-F3142AB06638} = {ABBF6465-48B9-429F-924B-25BFCBD1DF15}
+		{7839FD2F-9900-4B41-BA8E-290C14B7BF4C} = {ABBF6465-48B9-429F-924B-25BFCBD1DF15}
+		{D88B9670-0A9A-46CA-AC94-1CD9FE33727E} = {6BD89033-E469-4923-9EE7-5AD0A9FA8F3D}
+		{17BC4B78-CF99-4CEE-8A03-7A5BC1551811} = {3A60C9D9-63EC-49D3-B1AB-0E6CB929007B}
+		{DC60716C-5FA4-4916-B9C9-A20FFC32C139} = {6BD89033-E469-4923-9EE7-5AD0A9FA8F3D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92BA644C-EAD2-476F-B7AA-9EE931C1C5F6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+﻿namespace _23_EjemploLinq.Clases
+{
+    public class ClaseAnimal
+    {
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
+    }
+}
