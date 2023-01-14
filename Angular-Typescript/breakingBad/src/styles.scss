@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'reset';
+@import 'variables';
+@import 'layout';
+@import 'grid';
+
+button {
+  padding: $marginGrid;
+  background-color: $primaryColor;
+  border: 0;
+  color: white;
+  transition: 1s;
+
+  &:hover {
+    background-color: black;
+  }
+}

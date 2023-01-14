@@ -1,0 +1,78 @@
+<!-- 2º y 3º paso;Creamos un atributo dentro de la etiqueta form y implementamos  ngSubmit que llame a una funcion sin parametros--> 
+<form novalidate [formGroup]="formModel" (ngSubmit)="getDataForm()" >
+
+    <div class="my-2">
+        <label for="nombre" class="form-label">Nombre</label>
+<!-- 4º a cada campo le pasamos  formControlName="..."   -->
+        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+
+        <!-- IMPORTANTE! -->
+<!-- Validacion de los campos x si estan completos o si cumplen con la longitud minima "checkControl('nombre', 'required')" y  "checkControl('nombre', 'minlength')"-->
+        <p class="error" *ngIf= "checkControl('nombre', 'required')">El campo es obligatorio</p> 
+        <p class="error" *ngIf= "checkControl('nombre', 'minlength')">La longitud mínima del campo es de 3 caracteres</p>
+
+    </div>
+
+    <div class="my-2">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="edad" formControlName="edad">
+
+        <!-- De esta forma creamos ERROR PERSONALIZADO -->
+        <p class="error" *ngIf= "checkControl('edad', 'agevalidator')">    
+        {{formModel.get('edad')?.errors?.['agevalidator']}}
+        </p>
+
+    </div>
+
+    <div class="my-2">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email">
+        <p class="error" *ngIf= "checkControl('email', 'required')">El campo es obligatorio</p>
+        <p class="error" *ngIf= "checkControl('email', 'pattern')">El email no es valido</p>
+    </div>
+
+    <div class="my-2">
+        <label for="dni" class="form-label">DNI</label>
+        <input type="text" class="form-control" id="dni" formControlName="dni">
+
+          <!-- De esta forma creamos ERROR PERSONALIZADO de DNI -->
+          <p class="error" *ngIf= "checkControl('dni', 'dnivalidator')">    
+            {{formModel.get('dni')?.errors?.['dnivalidator']}}
+            </p>
+    </div>
+
+    <div class="my-4">
+        <select id="puesto" class="form-select" formControlName="puesto">
+            <option value="">Selecciona un trabajo</option>
+            <option value="frontend">Desarrollador Frontend</option>
+            <option value="backend">Desarrollador Backend</option>
+            <option value="fullStack">Desarrollador FullStack</option>
+        </select>
+    </div>
+
+    <div class="my-2">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+        <p class="error" *ngIf= "checkControl('password', 'required')">El campo es obligatorio</p>
+        <p class="error" *ngIf= "checkControl('password', 'minlength')">La longitud mínima es de 5 caracteres</p>
+        <p class="error" *ngIf= "checkControl('password', 'maxlength')">La longitud maxima es de 8 caracteres</p>
+
+    </div>
+
+    <div class="my-2">
+        <label for="repeatpass" class="form-label">Repite password</label>
+        <input type="password" class="form-control" id="repeatpass" formControlName="repeatpass">
+    </div>
+                <!-- VALIDACION DE  checkbox-->
+    <div>
+        <input type="checkbox" formControlName="rgpd"> He leido y acepto proteccion de datos.
+        <p class="error" *ngIf="(formModel.get('rgpd')?.hasError('required') && formModel?.get('rgpd')?.dirty) || (formModel.get('rgpd')?.hasError('required') && formModel?.touched) ">Debes de pasar por el yugo de cederme tus datos</p>
+    </div>
+                   <!-- VALIDACION DE PASSWORD -->
+    <p class="error" *ngIf="formModel.hasError('passwordvalidator') && formModel.get('repeatpass')?.touched">Las contraseñas no coinciden</p>
+
+<!-- Con [disabled]="!formModel.valid; Obliga a que este campo sea requerido y en el ts -->
+    <input type="submit" class="btn btn-danger mt-2" value="Enviar" [disabled]="!formModel.valid">
+    {{ formModel.valid }}
+</form>
+

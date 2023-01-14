@@ -1,0 +1,12 @@
+<section class="container">
+  <h1>Personajes</h1>
+  <!-- para quitarle la doble raya al hr  se le pone  [noshade] tal cual -->
+  <hr noshade="noshade"> 
+  <div class="row">
+
+    <article *ngFor="let character of arrCharacters" class="col-12 col-t-4 col-d-3">
+      <app-character-card [myCharacter]="character"></app-character-card>
+    </article>
+
+  </div>
+</section>

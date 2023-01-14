@@ -1,0 +1,15 @@
+
+<div>
+    <input type="color" (input)="cambiarColor($event)">
+    <div class="caja" [style]="'background-color:' + color"></div>
+    <div>
+        <input type="text" placeholder="introduce un texto" (input)="capturarTexto($event)">
+        <p>{{texto}}</p>
+    </div>
+
+</div>
+
+<!-- EJERCICIO select de ciudad que me permita escoger entre diferentes ciudades 
+    y me saque un mensaje de vivo en la ciudad seleccionada, si no marco 
+    ciudad o marco la opcion seleccionan ciudad el mensaje tiene que ser 
+    no vivo en ninguna ciudad.--> 

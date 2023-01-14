@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let servicio of servicios">
+      <!-- <app-serviciocard></app-serviciocard> -->
+      {{ servicio.title }} - <a class="link" [routerLink]="['/servicios', servicio.url]">más info</a>
+    </li>
+  </ul>
+  

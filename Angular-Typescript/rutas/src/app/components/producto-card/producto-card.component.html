@@ -1,0 +1,8 @@
+<div class="card p-3">
+    <figure>
+      <img [src]="miProducto.photo" [alt]="miProducto.title">
+    </figure>
+    <h3 class="card-title text-center">{{miProducto.title}}</h3>
+    <button class="btn btn-secondary" [routerLink]="['/producto', miProducto.id]">Vista producto</button>
+  </div>
+  

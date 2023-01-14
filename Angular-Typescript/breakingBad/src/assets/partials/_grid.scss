@@ -1,0 +1,40 @@
+@use 'sass:math'; //este plugin de sass me permite hacer operaciones matematicas con diferentes unidades PX con EM, etc
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+// LO DE ABAJO REPRESENTA LOS DISTINTOS SISTEMAS DE COLUMNAS PARA LOS DISTIN. DISPOSITIVOS
+[class*='col-'] {
+  margin: $marginGrid;
+}
+
+@mixin column($posicion) {
+  $columnWidth: 100%/12 * $posicion;
+  width: calc(#{$columnWidth} - #{$marginGrid * 2});
+}
+
+/* Este es el breakpoint para movil */
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include column($i)
+  }
+}
+
+/* Este es el breakpoint para tablet */
+@media(min-width: $breakpointTablet) {
+  @for $i from 1 through 12 {
+    .col-t-#{$i} {
+      @include column($i)
+    }
+  }
+}
+
+/* Este es el breakpoint para desktop */
+@media(min-width: $breakpointDesktop) {
+  @for $i from 1 through 12 {
+    .col-d-#{$i} {
+      @include column($i)
+    }
+  }
+}

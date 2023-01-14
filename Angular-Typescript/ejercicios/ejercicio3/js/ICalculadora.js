@@ -1,0 +1,3 @@
+"use strict";
+// 1º Implementamos el interfaz calculadora éste va a definir: una marca, un sumar....
+exports.__esModule = true;

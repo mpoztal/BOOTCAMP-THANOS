@@ -1,0 +1,21 @@
+<!-- la ? le dice al html que espere a que le llegue el resultado y lo pinte. Asi evitamos errores de html en angular-->
+<section>
+    <h1>Listado de Contactos</h1>
+    <hr>
+    <div class="row g-4">
+      <article *ngFor="let user of users" class="col-12 col-md-6 col-lg-4">
+        <app-user-card [myUser]="user"></app-user-card>
+      </article>
+    </div>
+    <nav>
+      <ul class="pagination justify-content-end">
+        <li class="page-item" [ngClass]="{'disabled': currentPage === 1 }">
+          <a class="page-link" (click)="goToPage(currentPage - 1)">Anterior</a>
+        </li>
+        <li class="page-item" [ngClass]="{'disabled': currentPage === totalPage }">
+          <a class="page-link" (click)="goToPage(currentPage + 1)">Siguiente</a>
+        </li>
+      </ul>
+    </nav>
+
+</section>

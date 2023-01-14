@@ -1,0 +1,11 @@
+<div *ngIf="tareas.length !== 0; else noTareas">
+    <article class="my-4 p-3" [ngClass]="{'urgente': tarea.prioridad === 'urgente', 'diaria': tarea.prioridad === 'diaria', 'mensual': tarea.prioridad === 'mensual'}" *ngFor= "let tarea of tareas">
+        <app-tarea [miTarea]="tarea" (tareaBorrada)="borrarTarea($event)"></app-tarea>  
+    </article>
+</div>
+
+<ng-template #noTareas>
+    <article class="my-4 p-3 notareas">
+        <h3>NO HAY TAREAS EN ESTE MOMENTO :(</h3>
+    </article>
+</ng-template>

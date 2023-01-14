@@ -1,0 +1,15 @@
+<section>
+    <div class="card shadow p-3">
+      <div class="row">
+        <figure class="col-12 col-md-4">
+          <img class="image" [src]="user?.avatar" [alt]="user?.first_name">
+        </figure>
+        <div class="col-12 col-md-8">
+          <h2>{{ user?.first_name }} {{user?.last_name}}</h2>
+          <p>Email: <a [href]="'mailto:' + user?.email">{{ user?.email }}</a></p>
+          <button class="btn btn-primary" [routerLink]="['/agenda']">Volver a agenda</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  

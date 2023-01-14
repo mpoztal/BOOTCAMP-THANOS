@@ -1,0 +1,26 @@
+.urgente{
+    border: 1px solid #eee;
+    border-radius: 15px;
+    background-color: #eee;
+    border-left: 7px solid tomato;
+}
+
+.diaria{
+    border: 1px solid #eee;
+    border-radius: 15px;
+    background-color: #eee;
+    border-left: 7px solid #6287ec;
+}
+
+.mensual{
+    border: 1px solid #eee;
+    border-radius: 15px;
+    background-color: #eee;
+    border-left: 7px solid #29d1a4;
+}
+.notareas{
+    border: 1px solid #eee;
+    border-radius: 15px;
+    background-color: #eee;
+    border-left: 7px solid grey;
+}

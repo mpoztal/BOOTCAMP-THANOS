@@ -1,0 +1,26 @@
+<!-- Modal -->
+<div class="modal fade" [id]="'characterModal'+ info.id" tabindex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="characterModalLabel">{{info?.name}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <figure class="col-12 col-md-5">
+              <img class="img-fluid" [src]="info?.image" [alt]="info?.name">
+            </figure>
+            <ul class="col-12 col-md-7">
+              <li>Estado: {{info?.status}}</li>
+              <li>Especie: {{info?.species}}</li>
+              <li>Genero: {{info?.gender}}</li>
+            </ul>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  

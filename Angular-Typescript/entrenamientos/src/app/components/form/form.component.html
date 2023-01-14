@@ -1,0 +1,18 @@
+<div class="form">
+    <div>
+        <label for="titulo" class="form-label">Titulo</label>
+        <input type="text" id="titulo" class="form-control" [(ngModel)]="entreno.titulo">
+    </div>
+
+    <div>
+        <label for="tiempo" class="form-label">Tiempo</label>
+        <input type="number" id="tiempo" class="form-control" [(ngModel)]="entreno.tiempo">
+    </div>
+
+    <div>
+        <label for="fecha" class="form-label">Fecha</label>
+        <input type="date" id="fecha" class="form-control" [(ngModel)]="entreno.fecha">
+    </div>
+
+    <button class="btn btn-dark mt-3" (click)="recogerDatosForm()">Guardar</button>
+</div>

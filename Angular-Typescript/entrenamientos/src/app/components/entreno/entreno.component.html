@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-between">
+    <div>
+        <h3>{{miEntreno.titulo.toUpperCase()}}</h3>
+        <small>Tiempo: {{miEntreno.tiempo}} | </small><small>Fecha: {{miEntreno.fecha}} | </small>
+    </div>
+    <button class="btn btn-dark" (click)="deleteEntreno(miEntreno.id)">Borrar</button>
+</div>

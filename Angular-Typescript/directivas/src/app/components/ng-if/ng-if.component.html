@@ -1,0 +1,38 @@
+<!-- <p *ngIf="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    At consequatur nisi ipsum dolorem tenetur qui ducimus 
+    maiores ex rerum ab excepturi, voluptatum ullam alias 
+    expedita porro aperiam delectus, repellat cumque.</p> -->
+
+               <!-- EJERCICIO   MENU DE TABS -->
+
+
+<div class="tabs">  
+    <nav>
+        <ul class="menu">
+            <li [ngClass]="{'activo': seccionActual === 'sobremi' }" (click)="cargarSeccion('sobremi')">Sobre mí</li>
+            <li [ngClass]="{'activo': seccionActual === 'experiencia' }"(click)="cargarSeccion('experiencia')">Experiencia</li>
+            <li [ngClass]="{'activo': seccionActual === 'estudios' }"(click)="cargarSeccion('estudios')">Estudios</li>
+        </ul>
+
+    </nav>
+  
+
+    <section *ngIf="seccionActual === 'sobremi'">
+        <h3>Sobre mí</h3>
+        <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt vitae, ut, voluptates suscipit quidem laborum ad itaque, vero iusto obcaecati omnis nisi? Qui reprehenderit sed voluptates expedita, officiis omnis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non excepturi impedit nesciunt accusamus accusantium delectus quam, voluptas ullam nobis ipsam perferendis ratione molestiae veritatis. Excepturi mollitia nam aut quae nulla.</p>
+
+    </section>
+
+    <section *ngIf="seccionActual === 'experiencia'">
+        <h3>Experiencia</h3>
+        <p>2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt vitae, ut, voluptates suscipit quidem laborum ad itaque, vero iusto obcaecati omnis nisi? Qui reprehenderit sed voluptates expedita, officiis omnis.</p>
+    </section>
+
+    <section *ngIf="seccionActual === 'estudios'">
+        <h3>Estudios</h3>
+        <p>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt vitae, ut, voluptates suscipit quidem laborum ad itaque, vero iusto obcaecati omnis nisi? Qui reprehenderit sed voluptates expedita, officiis omnis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non excepturi impedit nesciunt accusamus accusantium delectus quam, voluptas ullam nobis ipsam perferendis ratione molestiae veritatis. Excepturi mollitia nam aut quae nulla.</p>
+    </section>
+</div>
+

@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+/* Para q nos coja el estilo debemos pasarlo a la hoja de estilo principal */
+
+.rojo{
+    color: red;
+}

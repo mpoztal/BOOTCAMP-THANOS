@@ -1,0 +1,36 @@
+<!-- <ul>
+    <li *ngFor="let numero of numeros">{{numero}}</li>  
+</ul> -->
+<!-- PRIMER EJERCICIO:
+1º Como pintar todos los titulos y sus directores con un *ngFor 
+2º como pintar par de un color e impar de otro color.
+3º Con la etiq <small> nos pinta posicion dentro del array para después poder saber cual es par y cual impar
+    4º Primero y Ultimo-->
+<section class="row">
+
+    <article [ngClass]="{ 'rojo': par, 'verde': impar }" *ngFor="let episodio of episodios;let i = index; let par = even; let impar = odd; let primero = first; let ultimo = last">
+
+        <small>{{i}}</small> 
+        
+        <h3>{{episodio.title}}</h3>
+        <p>Director: {{episodio.director}}</p>
+
+        <p>{{par}}</p>        
+        <p>{{impar}}</p> 
+
+        <p>Primero: {{primero}}</p>
+        <p>Ultimo: {{ultimo}}</p>
+
+    </article>   
+</section>
+
+<!-- SEGUNDO EJERCICIO 
+Filtramos los episodios segun el director-->
+
+<select (change)="selectDirector($event)">
+    <option value="">Todos</option>
+    <option value="Tim Van Patten">Tim Van Patten</option>
+    <option value="Brian Kirk">Brian Kirk</option>
+    <option value="Daniel Minahan">Daniel Minahan</option>
+</select>
+

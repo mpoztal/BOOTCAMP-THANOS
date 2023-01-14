@@ -1,0 +1,14 @@
+/*  El campo es invalido y ha sido tocado   ng-invalid.ng-touched  y a la inversa abajo*/
+
+input.ng-invalid.ng-touched{
+    border-bottom: 3px solid tomato; 
+}
+
+input.ng-valid.ng-touched{
+    border-bottom: 3px solid lightgreen;
+}
+
+.error{
+    font-size: 12px;
+    color: tomato;
+}

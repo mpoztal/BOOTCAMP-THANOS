@@ -1,0 +1,44 @@
+<section>
+    <h1>{{type}} contacto</h1>
+    <hr>
+    <form novalidate [formGroup]="formContact" (ngSubmit)="getDataForm()">
+
+        <div>
+            <label for="first_name" class="form-label">Nombre</label>
+            <input class="form-control" [ngClass]="checkField('first_name')" type="text" id="first_name" formControlName="first_name">
+            <p class="error" *ngIf="checkError('first_name', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkError('first_name', 'minlength')">La longitud del campo tienes que ser mayor de 3 caracteres</p>
+          </div>
+      
+          <div>
+            <label for="last_name" class="form-label">Apellidos</label>
+            <input class="form-control" type="text" id="last_name" formControlName="last_name" [ngClass]="checkField('last_name')">
+            <p class="error" *ngIf="checkError('last_name', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkError('last_name', 'minlength')">La longitud del campo tienes que ser mayor de 3 caracteres</p>
+          </div>
+      
+          <div>
+            <label for="email" class="form-label">Email</label>
+            <input class="form-control" type="email" id="email" formControlName="email" [ngClass]="checkField('email')">
+            <p class="error" *ngIf="checkError('email', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkError('email', 'pattern')">El email no tiene formato valido</p>
+          </div>
+      
+          <div>
+            <label for="avatar" class="form-label">Foto</label>
+            <input class="form-control" type="url" id="avatar" formControlName="avatar" [ngClass]="checkField('avatar')">
+            <p class="error" *ngIf="checkError('avatar', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkError('avatar', 'pattern')">La url no tiene formato valido, necesario el htto/https</p>
+          </div>
+      
+      
+          <input class="btn btn-primary mt-3" type="submit" [value]="type" [disabled]="!formContact.valid">
+
+
+
+
+
+
+    </form>
+</section>
+

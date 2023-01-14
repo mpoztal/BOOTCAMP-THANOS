@@ -1,0 +1,17 @@
+<section class="container mt-4">
+    <h2>Lista de personajes</h2>
+    <hr>
+    <div class="row" *ngIf="arrCharacters.length >= 1; else bloqueElse">
+      <article class="col-12 col-md-6" *ngFor="let character of arrCharacters">
+        <app-character-card [myCharacter]="character"></app-character-card>
+      </article>
+    </div>
+    <ng-template #bloqueElse>
+      <h4>{{error}}</h4>
+    </ng-template>
+    <div class="d-flex justify-content-around mb-5" *ngIf="arrCharacters.length !== 0">
+      <button class="btn btn-danger" [disabled]="prev === null" (click)="gotoPage(prev)">ANTERIOR</button>
+      <button class="btn btn-danger" [disabled]="next === null" (click)="gotoPage(next)">SIGUIENTE</button>
+    </div>
+  </section>
+  

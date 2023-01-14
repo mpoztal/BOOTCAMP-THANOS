@@ -1,0 +1,27 @@
+<section class="container mt-3 p-3 card">
+    <h2>{{producto.title}}</h2>
+    <div class="row">
+      <figure class="col-12 col-md-3 p-3 miBorde">
+        <img [src]="producto.photo" [alt]="producto.title" class="img-fluid">
+      </figure>
+      <div class="col-12 col-md-9 ps-4">
+        <ul class="list-group">
+          <li class="list-group-item">Precio: {{producto.price}} €</li>
+          <li class="list-group-item">Stock: {{ (producto.stock)? 'stock disponible' : 'No disponible en este momento'}}</li>
+        </ul>
+        <hr>
+        <!-- 4ª Con el  [routerLink] de ambos botones, cargamos los componentes-->
+        <button class="btn btn-danger m-1" [routerLink]="['/producto', producto.id, 'opiniones']">Opiniones</button>
+        <button class="btn btn-danger m-1" [routerLink]="['/producto', producto.id, 'valores-nutricionales']">Valores nutricionales</button>
+  <!-- 1º Al poner <router-outlet></router-outlet>  Estamos creando el sistema de rutas HIJAS-->
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <div class=" container">
+    <button class="btn btn-danger mt-3 ms-auto d-block" [routerLink]="['/productos']">Volver a productos</button>
+  </div>
+  

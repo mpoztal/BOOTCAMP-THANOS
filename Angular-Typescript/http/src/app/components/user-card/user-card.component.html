@@ -1,0 +1,18 @@
+<div class="card mb-3 shadow border-primary">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="myUser?.avatar" class="image rounded-start" [alt]="myUser?.first_name">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ myUser?.first_name }}</h5>
+          <div class="d-flex mt-3">
+            <button class="btn btn-primary mx-1 px-3" [routerLink]="['/usuario', myUser.id]"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn btn-primary  mx-1 px-3" [routerLink]="['/actualizar', myUser.id]"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button class="btn btn-primary  mx-1 px-3" (click)="deleteUser(myUser.id)"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,18 @@
+<section class="container login">
+  <div class="form">
+    <form #loginForm="ngForm" (ngSubmit)="getDataForm(loginForm)">
+
+      <div>
+        <label for="username">Usuario</label>
+        <input type="text" id="username" name="username" ngModel>
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" ngModel>
+      </div>
+
+      <button type="submit">Entrar <i class="fa-solid fa-flask-vial"></i></button>
+    </form>
+  </div>
+</section>

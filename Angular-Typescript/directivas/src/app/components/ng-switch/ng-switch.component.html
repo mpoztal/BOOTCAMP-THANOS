@@ -1,0 +1,20 @@
+<!--El [ngSwitch] va a evaluar   producto.length   en funcion de la longitud del array-->
+
+<div class="notificaciones" [ngSwitch]="productos.length">
+    <p class="alert" *ngSwitchCase="0">No tienes stock. Tienes {{productos.length}} productos.</p>
+    <p class="warning" *ngSwitchCase="1">Te queda {{productos.length}} producto.</p>
+    <p class="warning" *ngSwitchCase="2">Te quedan {{productos.length}} productos.</p>
+    <p class="warning" *ngSwitchCase="3">Te quedan {{productos.length}} productos.</p>
+    <p class="success" *ngSwitchDefault>Tienes stock suficiente.</p>
+</div>
+
+<hr>
+<div class="notificaciones">
+    <p class="alert" *ngIf="productos.length <= 0">No tienes stock. Tienes {{productos.length}}</p>
+
+    <p class="warning" *ngIf="productos.length >= 1 && productos.length <= 3">Te queda {{productos.length}} </p>
+
+    <p class="success" *ngIf="productos.length >= 4">Hay suficiente stock. Tienes {{productos.length}} productos</p>
+</div>
+
+<!-- Para lograr ver cada uno de los <p> tenemos q ir eliminando del doc ts elementos del array---> 

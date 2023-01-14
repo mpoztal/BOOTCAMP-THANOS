@@ -1,0 +1,17 @@
+<p [class]="estilos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Assumenda nobis, exercitationem ex quod nostrum incidunt 
+    ab delectus dolore iste animi aliquid autem obcaecati 
+    error asperiores. Perspiciatis culpa corporis iste ullam!</p>
+
+    <p [ngClass]="[azul, 'textoRojo']">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Assumenda nobis, exercitationem ex quod nostrum incidunt 
+        ab delectus dolore iste animi aliquid autem obcaecati 
+        error asperiores. Perspiciatis culpa corporis iste ullam!</p>
+
+    <p [ngClass]="{'fondoRojo': activo, 'fondoAzul': !activo}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Assumenda nobis, exercitationem ex quod nostrum incidunt 
+        ab delectus dolore iste animi aliquid autem obcaecati 
+        error asperiores. Perspiciatis culpa corporis iste ullam!</p>
+
+        <button (click)="cambiarActivo()">Cambiar</button>
+    

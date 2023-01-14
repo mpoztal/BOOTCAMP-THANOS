@@ -1,0 +1,34 @@
+
+<!-- CAMBIAMOS COLOR DE FONDO Y DE FUENTE, TAMAÑO REGULADO X EL RANGER 
+Hemos modificado un objeto a traves de diferentes valores (párrafo1)-->
+
+<input type="range" min="10" max="60" step="5" [value]="fontSize" (input)="cambiarFuente($event)">
+
+
+<p [ngStyle]="{'background-color': bgColor, 'color': 'white', 'padding': '10px', 'font-size': fontSize + 'px'}" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+    Doloribus omnis alias sequi laboriosam nulla perferendis 
+    qui? Iusto nam esse nulla nostrum, corrupti quos dolor sapiente 
+    voluptate illo, inventore, sequi exercitationem?</p>
+
+    <hr>
+
+        <input type="text" placeholder="introduce una propiedad Css" [(ngModel)]="propiedadCss" >
+        <input type="text" placeholder="introduce el valor de la propiedad" [(ngModel)]="valorCss">
+        <button (click)="cambiarEstilos()">APLICAR</button>
+        
+<!-- Ó podemos crear un objeto de forma dinámica con propiedades y volores dinámicos q me permita generar diferentes estilos a un objeto-->
+        <p [ngStyle]="estiloParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cumque aspernatur placeat voluptatem, sunt rerum impedit 
+                        magni, expedita optio quisquam perferendis, fugiat beatae 
+                        reprehenderit tenetur! Sed quis placeat blanditiis laborum iusto!</p>
+                       
+
+                        <!-- PASOS A SEGUIR EJER.PARRAFO 2 -->
+<!-- 1º En ambos input pondremos [(ngModel)]="" al hacer ésto ya están asociados a estas propiedades.
+     Crear propiedadCss: string = "" Y valorCss: string = "" (2 variables en ng style.components.ts)
+    
+    2º En app module.ts importaremos la libreria para q funcione. en imports: FormsModule
+    3º Necesitamos un evento en button para capturar los valores. click
+    4º Creamos la propiedad en el <p [ngStyle]="estiloParrafo"> -->
+
+                       

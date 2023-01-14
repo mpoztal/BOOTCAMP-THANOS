@@ -1,0 +1,45 @@
+<button (click)="cambiarEstado()">Cambiar</button>
+
+<!-- OPCION 1 nos relentiza mucho -->
+<!-- <div *ngIf="estado">
+    <p>Este contenido se visualiza con estado = true</p>
+</div>
+
+<div *ngIf="!estado">
+    <p>Este contenido se visualiza con estado = false</p>
+</div> -->
+
+<!-- OPCION 2 forma con más rendimiento-->
+
+<div *ngIf="estado; else bloqueElse">
+    <p>Estoy en true</p>
+</div>
+
+<!-- Esta etiq <ng-template>  se crea para q no de error el bloque Else -->
+<ng-template #bloqueElse>    
+<div>
+    <p>Estoy en false</p>
+</div>
+</ng-template>
+
+
+<!-- OPCION 3 then else-->
+
+
+<!-- Este <div> no se muestra en el HTML, solo contiene el *ngIf (contenedor de la condicion)-->
+<div *ngIf="estado; then contentTrue else contentFalse"></div>
+
+
+<ng-template #contentTrue>
+    <div>
+        <p>Estructura para valor True</p>
+    </div>
+</ng-template>
+
+<ng-template #contentFalse>
+    <div>
+        <p>Estructura para valor False</p>
+    </div>
+</ng-template>
+
+

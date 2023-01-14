@@ -1,0 +1,30 @@
+@use 'sass:math';
+@import 'variables';
+
+
+.login {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    border: 2px solid $primaryColor;
+    border-radius: $marginGrid * 1.5;
+    width: 80%;
+    padding: 20px;
+    box-shadow: 1px 1px 10px #ccc;
+
+    input {
+      width: 100%;
+      padding: $marginGrid;
+
+      margin: {
+        bottom: $marginGrid;
+        top: $marginGrid;
+      }
+    }
+
+  }
+
+}

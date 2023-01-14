@@ -1,0 +1,41 @@
+@import 'variables';
+
+.card {
+  border: 1px solid $primaryColor;
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+// Resaltar el efecto del hover---> desplazamiento 
+  &:hover .info {
+    margin-left: 0px;
+  }
+
+  figure img {
+    height: 400px;
+    object-fit: cover;
+    object-position: top center;
+  }
+// con éstos parametros de la .info conseguimos la foto de la card un poco translúcida y los nombres sobresaltan
+  .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    margin-left: -700px;
+    transition: 1s;
+
+    figcaption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.5em;
+    }
+  }
+}

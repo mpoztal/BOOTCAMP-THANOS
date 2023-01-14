@@ -1,0 +1,20 @@
+<section class="container mt-3">
+    <div class="card shadow p-3 border-2" [ngClass]="{'border-danger': !employee.status, 'border-success': employee.status}">
+      <div class="row">
+        <figure class="col-12 col-md-4">
+          <img class="img" [src]="employee.photo" [alt]="employee.name">
+        </figure>
+        <div class="col-12 col-md-8">
+          <h2>{{employee.name}} {{employee.surname}}</h2>
+          <hr>
+          <ul>
+            <li>Email: {{employee.email}}</li>
+            <li>Dni: {{employee.dni}}</li>
+            <li>Departamento: {{department.title}}</li>
+          </ul>
+          <button (click)="changeStatus()" class="btn" [ngClass]="{ 'btn-danger': !employee.status, 'btn-success': employee.status }">{{ (employee.status)? 'Desactivar' : 'Activar' }}</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  

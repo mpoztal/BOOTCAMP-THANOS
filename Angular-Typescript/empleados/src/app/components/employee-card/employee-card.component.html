@@ -1,0 +1,12 @@
+<!--Con el [ngClass] aplicaremos borde rojo si no está activo el empleado y verde si lo está -->
+<div class="card border-2" [ngClass]="{'border-danger': !myEmployee.status, 'border-success': myEmployee.status}">
+    <img [src]="myEmployee.photo" class="card-img-top" [alt]="myEmployee.name">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{myEmployee.name}} {{myEmployee.surname}}</h5>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-dark" [routerLink]="['/employee', myEmployee.id]">Ver detalle</button>
+        <button class="btn" (click)="changeStatus()" [ngClass]="{'btn-danger': !myEmployee.status, 'btn-success': myEmployee.status}">{{ (myEmployee.status) ? 'Desactivar' : 'Activar' }}</button> 
+      </div>
+    </div>
+  </div>
+  
