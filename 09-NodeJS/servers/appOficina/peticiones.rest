@@ -1,0 +1,7 @@
+GET http://localhost:3000/api/empleados/62f0f68c807437faa6f6de1e
+
+###
+GET http://localhost:3000/api/departamentos/62f0f6f6807437faa6f6de34    
+
+###
+GET http://localhost:3000/api/oficinas

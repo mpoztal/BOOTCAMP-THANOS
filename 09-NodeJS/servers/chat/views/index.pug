@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    header
+        h1.animate__animated.animate__pulse 🚨 Chachi Chat 🥳
+        h2#usuarios
+    main 
+        ul#mensajes
+            each mensaje in mensajes
+                li #{mensaje.username}: #{mensaje.texto}
+    footer 
+        div 
+            label Nombre 
+            input#inputNombre(type="text")
+        div 
+            label Mensaje
+            input#inputMensaje(type="text")
+        button#btnEnviar Enviar
+    
+    script.
+        const socket = io();
+
+        const inputNombre = document.getElementById('inputNombre');
+        const inputMensaje = document.getElementById('inputMensaje');
+        const btnEnviar = document.getElementById('btnEnviar');
+        const ulMensajes = document.getElementById('mensajes');
+        const h2 = document.getElementById('usuarios');
+
+        btnEnviar.addEventListener('click', () => {
+            const obj = {
+                nombre: inputNombre.value,
+                mensaje: inputMensaje.value,
+                socket_id: socket.id
+            }
+            // Emito el evento mensaje_chat
+            socket.emit('mensaje_chat', obj);
+        });
+
+        socket.on('mensaje_chat', (data)=>{
+            const li = document.createElement('li');
+            li.innerText = `${data.nombre}: ${data.mensaje}`;
+            if(data.socket_id === socket.id){
+                li.classList.add('propietario');
+            }
+            ulMensajes.prepend(li);
+        });
+
+        // Capturamos el evento usuarios_chat y colocamos el número de usuarios en un h2 dentro de la cabecera
+        socket.on('usuarios_chat', (data)=>{
+            h2.innerText = `Usuarios conectados: ${data}`;
+        });

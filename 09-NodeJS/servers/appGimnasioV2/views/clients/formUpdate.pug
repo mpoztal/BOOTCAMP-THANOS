@@ -1,0 +1,58 @@
+extends ../layout.pug
+
+block content
+    h2 Nuevo cliente 
+    form(action="/clients/update", method="post")
+        .mb-3
+            label.form-label Nombre
+            input.form-control(type="text", name="nombre", value=cliente.nombre)
+        .mb-3
+            label.form-label Apellidos
+            input.form-control(type="text", name="apellidos", value=cliente.apellidos)
+        .mb-3
+            label.form-label Dirección
+            input.form-control(type="text", name="direccion", value=cliente.direccion)
+        .mb-3
+            label.form-label Edad
+            input.form-control(type="text", name="edad", value=cliente.edad)
+        .mb-3
+            label.form-label Género
+            select.form-select(name="genero")
+                option(value="m") Masculino 
+                option(value="f") Femenino
+            label.form-label Másculino
+            input.form-check-input(type="radio", name="genero_r", value="m")
+            label.form-label Femenino
+            input.form-check-input(type="radio", name="genero_r", value="f")
+        .mb-3
+            label.form-label Email
+            input.form-control(type="text", name="email", value=cliente.email)
+        .mb-3
+            label.form-label DNI
+            input.form-control(type="text", name="dni", value=cliente.dni)
+        .mb-3
+            label.form-label Cuota
+            input.form-control(type="text", name="cuota", value=cliente.cuota)
+        .mb-3
+            label.form-label Fecha Nacimiento
+            input.form-control(type="date", name="fecha_nacimiento", value=cliente.fecha_nacimiento)
+        input(type="hidden", name="clientId", value=cliente.id)
+        input(type="submit", value="Enviar")
+    script.
+        const genero = "#{cliente.genero}"; 
+        
+        const options = document.querySelectorAll('[name="genero"] option');
+        for(let option of options){
+            if (option.value === genero){
+                option.selected= true;
+                break;
+            }
+        }
+
+        const radios = document.querySelectorAll('[type="radio"]');
+        for(let radio of radios){
+            if (radio.value === genero){
+                radio.checked= true;
+                break;
+            }
+        }

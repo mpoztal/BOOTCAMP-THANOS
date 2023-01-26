@@ -1,0 +1,7 @@
+GET http://localhost:undefined/
+
+###
+POST http://localhost:3005/create  
+
+###
+PUT http://localhost:3005/product/edit

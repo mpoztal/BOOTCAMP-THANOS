@@ -1,0 +1,26 @@
+<section class="container mt-3">
+    <h1>Geolocalización Google Maps</h1>
+    <div class="card mapa">
+  
+      <agm-map [latitude]="lat" [longitude]="long" [zoom]="10">
+        <!-- agm-marker es el icono de localizacion -->
+        <agm-marker [latitude]="lat" [longitude]="long" [iconUrl]="$any({url: 'https://images.vexels.com/media/users/3/135409/isolated/preview/ce89e34d35b8d83d821650449e7e096f-sombrilla-de-playa.png', scaledSize: {width: 50, height: 50} })">
+  
+          <agm-info-window>
+            <h5 class="text-danger">La casa del profe</h5>
+            <hr>
+            <p>Alguna información</p>
+            <ul>
+              <li>Latitud: {{lat}}</li>
+              <li>Longitud: {{long}}</li>
+            </ul>
+            <a class="btn btn-sm btn-danger" href="http://www.google.es" target="_blanck">Ver detalle</a>
+          </agm-info-window>
+  
+  
+        </agm-marker>
+      </agm-map>
+  
+    </div>
+  </section>
+  

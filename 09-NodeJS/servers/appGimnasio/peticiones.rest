@@ -1,0 +1,59 @@
+GET http://localhost:3000/api/clients?limit=20&page=5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMiwiZXhwX2RhdGUiOjE2NTkwODA5MjMsImlhdCI6MTY1OTA4MDYyM30.FBHdJUnvgJ-zuYNjzizaCuvtJK8x1hL5wFODT9CtnAI
+
+###
+GET http://localhost:3000/api/teachers
+
+###
+GET http://localhost:3000/api/clients/older/70
+
+###
+GET http://localhost:3000/api/clients/between/73/and/78
+
+###
+# Creación de clientes
+###
+POST http://localhost:3000/api/clients
+Content-Type: application/json
+
+{
+    "nombre": "Rodolfo",
+    "apellidos": "García",
+    "direccion": "Calle Falsa 123",
+    "email": "rodolfo1@gmail.com",
+    "edad": 45,
+    "genero": "f",
+    "cuota": 19.90,
+    "fecha_nacimiento": "1978-08-12",
+    "dni": "99919289Y"
+}
+
+###
+PUT http://localhost:3000/api/clients/104
+Content-Type: application/json
+
+{
+    "nombre": "Rodolfo",
+    "apellidos": "García",
+    "direccion": "Calle Falsa 123",
+    "email": "rodolfo1@gmail.com",
+    "edad": 56,
+    "genero": "f",
+    "cuota": "19.90",
+    "fecha_nacimiento": "1978-08-11",
+    "dni": "99919289Y"
+}
+
+
+###
+GET http://localhost:3000/api/teachers/clients
+
+###
+DELETE http://localhost:3000/api/clients/105
+
+
+###
+GET http://localhost:3000/clients
+
+###
+POST  http://localhost:3000/clients/create

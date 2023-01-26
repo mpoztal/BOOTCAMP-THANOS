@@ -1,0 +1,34 @@
+h1 Título de la página
+h2 Subtítulo de la página
+div
+    p Párrafo 1
+    p Párrafo 2
+    p Párrafo 3
+// Comentario HTML
+//- Comentario PUG
+div 
+    a(href="http://google.com", id="enlace-google") Google.com
+    a#enlace-20min(href="http://20minutos.es") 20 Minutos
+    a#enlace-youtube.enlace.rojo(href="http://youtube.com") Youtube
+
+.variables
+    p= nombre
+    p Mi nombre es: #{nombre}
+
+.bucles
+    ul
+        - for(let i =0; i < animales.length; i++)
+            li= animales[i]
+    
+    - animales = []
+    ul
+        each animal in animales
+            li= animal
+        else
+            li No hay animales
+.botones 
+    button Pulsa aquí
+    script.
+        document.querySelector('.botones button').addEventListener('click', ()=>{
+            console.log('Se ha pulsado');
+        });

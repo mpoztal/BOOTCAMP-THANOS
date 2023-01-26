@@ -1,0 +1,29 @@
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  width: 200px;
+  padding: 10px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.menu ul li:hover {
+  background-color: dodgerblue;
+  cursor: pointer;
+}
+
+.menu ul li:hover a {
+  color: white;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+}
