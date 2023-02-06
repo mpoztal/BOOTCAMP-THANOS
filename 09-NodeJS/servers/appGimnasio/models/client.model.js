@@ -1,5 +1,5 @@
 const { executeQuery, executeQueryOne } = require('../helpers/utils');
-
+// Método getAll que devuelve todos los clientes
 const getAll = () => {
     return executeQuery('select * from clientes');
 };
@@ -37,7 +37,7 @@ const getByPage = (page = 1, limit = 10) => {
     limit = parseInt(limit);
     return executeQuery('select * from clientes limit ? offset ?', [limit, (page - 1) * limit])
 }
-
+// Esta es una query más complicada.
 const getInfo = (limit = 10) => {
     return executeQueryOne('select count(*) as total, ceil(count(*)/?) as paginas from clientes', [parseInt(limit)]);
 }

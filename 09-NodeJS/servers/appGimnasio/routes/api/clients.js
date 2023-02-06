@@ -2,13 +2,14 @@ const router = require('express').Router();
 
 const Client = require('../../models/client.model');
 
+// Método que recupera TODOS los clientes empleando then catch
 // router.get('/', (req, res) => {
 //     Client.getAll()
 //         .then(result => res.json(result))
 //         .catch(err => res.json({ error: err.message }));
 // });
 
-// Método que recupera TODOS los clientes
+// Método que recupera TODOS los clientes empleando try catch
 // router.get('/', async (req, res) => {
 //     try {
 //         const result = await Client.getAll();
@@ -18,7 +19,8 @@ const Client = require('../../models/client.model');
 //     }
 // });
 
-
+//Método que recupera Clientes paginados
+//- Número total de clientes- Número total de páginas- Página siguiente y Página anterior
 router.get('/', async (req, res) => {
     // console.log(req.user);
     let { page, limit } = req.query;
@@ -30,8 +32,8 @@ router.get('/', async (req, res) => {
         const info = {
             total: result.total,
             pages: result.paginas,
-            next: `http://localhost:3000/api/clients?page=${Number(page) + 1}`,
-            prev: `http://localhost:3000/api/clients?page=${Number(page) - 1}`
+            next: `http://localhost:3000/api/clients?page=${Number(page) + 1}`,//Página siguiente
+            prev: `http://localhost:3000/api/clients?page=${Number(page) - 1}`//Página anterior
         }
 
         const clientes = await Client.getByPage(page, limit);
@@ -45,6 +47,8 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Método get, para extraer clients por edad.
+// El valor dinámico se utiliza : y el nombre(age) q yo decida
 router.get('/older/:age', (req, res) => {
     const { age } = req.params;
 

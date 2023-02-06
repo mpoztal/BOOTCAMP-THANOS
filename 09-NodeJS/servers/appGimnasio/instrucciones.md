@@ -67,7 +67,7 @@ GET /api/clients?page=3&limit=10
 { "info": { "total": 105, "pages": 11, "next": URLSIG, "prev": URLPREV },
 "result": [ARRAY DE CLIENTES] }
 
-## URLS Clientes
+## URLS Clientes      RESUMEN DE TODO LO QUE TENEMOS
 
 GET /
 

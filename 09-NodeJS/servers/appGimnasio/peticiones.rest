@@ -11,7 +11,7 @@ GET http://localhost:3000/api/clients/older/70
 GET http://localhost:3000/api/clients/between/73/and/78
 
 ###
-# Creación de clientes
+# Creación de clientes, inserción de cliente, con los campos predefinidos, Con ésto estamos haciendo una petición a DB.
 ###
 POST http://localhost:3000/api/clients
 Content-Type: application/json

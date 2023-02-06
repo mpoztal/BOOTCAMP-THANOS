@@ -9,15 +9,15 @@ var debug = require('debug')('appgimnasio:server');
 var http = require('http');
 const { decodeBase64 } = require('bcryptjs');
 
-// Config Database
+// Config Database Requiero para poder acceder a la base de datos
 require('../config/db');
 
+// Prueba para ver si funciona
+//db.query('select * from clientes where id = 99', (err, result) => {
+  //console.log(err);
+  //console.log(result);
 
-db.query('select * from clientes where id = 99', (err, result) => {
-  console.log(err);
-  console.log(result);
-
-});
+//});
 /**
  * Get port from environment and store in Express.
  */

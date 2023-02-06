@@ -19,6 +19,9 @@ router.get('/names', async (req, res) => {
     }
 });
 
+
+
+
 router.get('/clients', async (req, res) => {
     try {
         // Recupero todos los profesores
@@ -33,15 +36,6 @@ router.get('/clients', async (req, res) => {
         res.json({ error: err.message });
     }
 });
-
-
-
-
-
-
-
-
-
 
 
 

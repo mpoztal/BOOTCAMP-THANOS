@@ -17,7 +17,7 @@ const executeQuery = (sql, arr = []) => {
 }
 
 /**
- * Ejecuta una sentencia SQL y nos devuelve un único elemento. Null si no existe
+ * Ejecuta una sentencia SQL y nos devuelve un único elemento.ó Null si no existe
  * @param {string} sql Sentencia SQL a ejecutar
  * @param {any[]} arr Array con los valores
  * @returns 
