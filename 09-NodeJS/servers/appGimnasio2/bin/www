@@ -5,17 +5,14 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('tiendaonline:server');
+var debug = require('debug')('appgimnasio2:server');
 var http = require('http');
 
-
-// Config .env
+// Config ENV  con esto, ya podemos usar todos los datos q tenemos definidos en este fich. de entorno
 require('dotenv').config();
 
-// Conexión a la BD
+// Configuración DB  (indica donde está mi base datos)
 require('../config/db');
-
-
 
 /**
  * Get port from environment and store in Express.

@@ -6,8 +6,9 @@ const createToken = (user) => {
         role: user.role
     }
 
-    const token = jwt.sign(payload, process.env.SECRET_KEY);
-    return token;
+    return jwt.sign(payload, process.env.SECRET_KEY);
 }
+
+
 
 module.exports = { createToken };

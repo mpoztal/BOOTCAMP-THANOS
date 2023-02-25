@@ -8,7 +8,7 @@ const getByEmail = (email) => {
     return executeQueryOne('select * from usuarios where email = ?', [email]);
 }
 
-const getById = (userId) => {
+const getById = (userId) => { // Recupero usuario por su Id
     return executeQueryOne('select * from usuarios where id = ?', [userId]);
 }
 

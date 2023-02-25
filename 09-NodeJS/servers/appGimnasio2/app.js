@@ -6,14 +6,15 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const productsRouter = require('./routes/api/products');
-const apiRouter = require('./routes/api');
+const clientsRouter = require('./routes/clients');
+
+
 
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));// Aquí están todas las vistas de mi aplicaión
+app.set('view engine', 'pug');//Este es el motor d plantillas para traducirlas
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -23,8 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/', productsRouter);
-app.use('/api', apiRouter);
+app.use('/clients', clientsRouter);
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,3 +1,4 @@
+// 1º probaremos q el name venga definido con la herramienta  express-validator q hemos instalado
 module.exports = {
     name: {
         exists: true,

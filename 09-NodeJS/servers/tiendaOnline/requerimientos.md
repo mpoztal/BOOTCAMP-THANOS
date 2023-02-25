@@ -3,10 +3,10 @@
 - GET /api/products
   - Recuperar todos los productos
   - PRUEBAS:
-    - Que el status de la respuesta sea 200 [X]
-    - Que el contenido de la respuesta es en formato JSON
-    - Que la respuesta sea un array
-    - Que los productos devueltos son un número concreto
+    - 1 Que el status de la respuesta sea 200 [X]
+    - 2 Que el contenido de la respuesta es en formato JSON
+    - 3 Que la respuesta sea un array
+    - 4 Que los productos devueltos son un número concreto
 
 - POST /api/products
   - Crear un único producto
@@ -45,14 +45,28 @@
 - Si paso un objeto con name menos de 3 caracteres, error
 - Si paso available a false, error
 
+
+
 # USUARIOS
 
 - Modelo: User -> username, email, password, active (Boolean), role
 
 - RUTA:
 
-  - /api/users/register
-    - Recibe a través del body los datos de un user y lo inserta en la BD
+  - /api/users/register--->(ver en fich. users.js)una vez credo lo engancho en api.js así---> router.use('users', require('./api/users'));
+
+  - Recibe a través del body los datos de un user ---> try {
+
+        const user = await User.create(req.body);
+        res.json(user);
+
+    } catch (err) {
+        res.json({ error: err.message });
+    }
+
+  y lo inserta en la BD----> (ver en MongoDB) que el user está insertado además con password encriptada (ver user.js)
+
+  
 
 GET /products/add/IDPRODUCT
 
@@ -62,6 +76,6 @@ GET /products/cart
 
 - Recupera los productos del usuario logado
 
-GET /users/profile
+GET /users/profile  (ver en users.js en get('/profile')
 
 - Recupera el perfil completo del usuario logado. Productos incluidos

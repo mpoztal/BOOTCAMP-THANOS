@@ -2,8 +2,8 @@ POST http://localhost:3000/api/users/register
 Content-Type: application/json
 
 { 
-    "username": "lucia",
-    "email": "lucia@codehouse.com",
+    "username": "Diego",
+    "email": "diego@codehouse.com",
     "password": "12345"
 }
 
@@ -13,6 +13,7 @@ POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
 {
-    "email": "lucia@codehouse.com",
+    "email": "diego@codehouse.com",
     "password": "12345"
 }
+

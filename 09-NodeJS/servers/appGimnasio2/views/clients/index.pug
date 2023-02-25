@@ -1,0 +1,40 @@
+//-1ºCoge como base el ../layout.pug y donde en éste layout ponga block content .....
+extends ../layout.pug 
+//-Le añadiremos todo el contenido desde h1 hasta el final
+block content 
+    h1 Todos los clientes
+
+    table.table
+        thead
+            tr 
+                th Id
+                th Nombre
+                th Apellidos
+                th Dirección
+                th Edad
+                th Género
+                th Email
+                th DNI
+                th cuota
+                th Fecha Nacimiento
+                
+                
+        tbody 
+            each cliente in clientes
+                tr 
+                    td= cliente.id
+                    td= cliente.nombre
+                    td= cliente.apellidos
+                    td= cliente.direccion
+                    td= cliente.edad
+                    td= cliente.genero
+                    td= cliente.email
+                    td= cliente.dni
+                    td= cliente.cuota
+                    td= cliente.fecha_nacimiento
+                    td 
+                        a.btn.btn-info.btn-sm(href="/clients/"+cliente.id) 👀
+                        a.btn.btn-success.btn-sm(href="/clients/edit/"+cliente.id) 📝
+                        a.btn.btn-danger.btn-sm(href="/clients/delete/"+cliente.id, 
+                        onclick="return confirm('¿Estás seguro?')") 🗑
+

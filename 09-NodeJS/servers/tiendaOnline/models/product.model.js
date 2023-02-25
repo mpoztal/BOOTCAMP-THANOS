@@ -1,3 +1,4 @@
+// Aquí vamos a definir nuestro esquema, qué campos tiene...etc
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -10,25 +11,5 @@ const productSchema = new Schema({
     created_at: Date
 });
 
-productSchema.virtual('price_taxes').get(function () {
-    return this.price * 1.21;
-});
-
-// Función que nos devuelva todos los productos que compartan departamento con otro producto concreto.
-// product.sameDepartment();
-productSchema.methods.sameDepartment = function () {
-    return this.model('product').find({ department: this.department });
-}
-
-// Función que nos devuelva todos los productos disponibles
-// Product.availables();
-productSchema.statics.availables = function () {
-    return this.model('product').find({ available: true });
-}
-
-module.exports = mongoose.model('product', productSchema);
-
-// {
-//     name: '',
-//     price_taxes: 
-// }
+module.exports = mongoose.model('product', productSchema);    //1º parametro('product') Todo lo q hay dentro 
+//de esta colección en DB va a tener ésta estructura (productSchema)

@@ -1,0 +1,56 @@
+h1 Título de la página
+h2 Subtítulo de la página
+div
+  p Párrafo 1
+  p Párrafo 2 
+  p Párrafo 2  
+
+// Comentario HTML (sólo lo vemos en el html del inspector)
+//-Comentario PUG (ólo lo vemos en Pug)
+ //-Desde index.js definimos el valor de dicho parámetro //-Abajo muestra un valor variable
+
+div 
+  a(href="http://google.com", id="enlace-google") Google.com 
+  a#enlace-20min(href="http://20minutos.es") 20 Minutos 
+  a#enlace-youtube.enlace.rojo(href="http://youtube.com") Youtube
+.variables
+    p= nombre 
+ 
+    p Mi nombre es: #{nombre} 
+
+.bucles 
+  ul
+    - for(let i =0; i < animales.length; i++) 
+      li= animales[i]
+
+  - animales = []
+  ul
+    each animal in animales 
+      li=animal 
+    else 
+      li No hay animales
+.botones 
+  button Pulsa aquí
+  script.  
+      document.querySelector('.botones button').addEventListener('click', () => {
+        console.log('Se ha pulsado')
+      });
+ //-Ejemplo de como generar una tabla de clientes con ésta vista
+h1 Todos los clientes 
+table 
+    thead 
+        tr
+            td Id 
+            td Nombre 
+            td Apellidos 
+            td Email 
+    tbody 
+        each cliente in clientes 
+            tr 
+                td= cliente.id 
+                td= cliente.nombre   
+                td= cliente.apellidos   
+                td= cliente.email    
+
+
+    

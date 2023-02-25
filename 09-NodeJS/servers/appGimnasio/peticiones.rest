@@ -1,5 +1,5 @@
 GET http://localhost:3000/api/clients?limit=20&page=5
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMiwiZXhwX2RhdGUiOjE2NTkwODA5MjMsImlhdCI6MTY1OTA4MDYyM30.FBHdJUnvgJ-zuYNjzizaCuvtJK8x1hL5wFODT9CtnAI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNiwiZXhwX2RhdGUiOjE2NzYwMjg5MDksImlhdCI6MTY3NjAyODYwOX0.xWjRHHlYsOkoo2ppFwbCPbckoPgjCbUhoPwlaffA22k
 
 ###
 GET http://localhost:3000/api/teachers
